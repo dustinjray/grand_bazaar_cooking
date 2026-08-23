@@ -1,0 +1,15 @@
+pages_fetched: 6
+recipes: 266
+items: 256
+auto_created_items: 0
+unknown_tokens: 0
+missing_prices: 0
+empty_slots: 0
+
+== unknown tokens ==
+
+== auto-created items ==
+
+== missing prices ==
+
+== empty accepted lists ==

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Inventory · Grand Bazaar Cooking{% endblock %}
+{% block content %}
+<section class="appliances">
+  <h1>Kitchen appliances</h1>
+  <p>Check the appliances installed in your home. Recipes that need a utensil stay locked until you own it.</p>
+  <div class="appliance-grid">
+    {% for appliance in appliances %}
+    <label class="appliance">
+      <input type="checkbox" data-appliance="{{ appliance.id }}" {% if appliance.owned %}checked{% endif %}>
+      <span>{{ appliance.name }}</span>
+    </label>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <div class="toolbar">
+    <h1>Ingredients</h1>
+    <form class="filters" method="get" action="/inventory">
+      <label class="grow">
+        <span>Search</span>
+        <input type="search" name="q" value="{{ q }}" placeholder="Item name">
+      </label>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div class="item-list">
+    {% for item in items %}
+    <div class="item-row" data-item-id="{{ item.id }}" data-saved="{{ item.count }}">
+      <div>
+        <strong>{{ item.name }}</strong>
+        {% if item.family %}<span class="muted">{{ item.family }}</span>{% endif %}
+      </div>
+      <div class="item-controls">
+        <div class="stepper">
+          <button type="button" data-delta="-1" aria-label="Decrease">−</button>
+          <input type="number" min="0" value="{{ item.count }}" data-count>
+          <button type="button" data-delta="1" aria-label="Increase">+</button>
+        </div>
+        <button type="button" class="save-btn" data-save disabled>Save</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if not items %}
+  <p class="empty">No items match that search.</p>
+  {% endif %}
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="/static/inventory.js"></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Grand Bazaar Cooking{% endblock %}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">GB</span>
+      <div>
+        <strong>Grand Bazaar</strong>
+        <span>Cooking kitchen</span>
+      </div>
+    </div>
+    <nav>
+      <a href="/" class="{% if page == 'recipes' %}active{% endif %}">Recipes</a>
+      <a href="/inventory" class="{% if page == 'inventory' %}active{% endif %}">Inventory</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <div id="flash" class="flash" hidden></div>
+  <script src="/static/app.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

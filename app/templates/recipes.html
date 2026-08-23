@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Recipes · Grand Bazaar Cooking{% endblock %}
+{% block content %}
+<section class="toolbar">
+  <form class="filters" method="get" action="/">
+    <label class="grow">
+      <span>Search</span>
+      <input type="search" name="q" value="{{ q }}" placeholder="Recipe name">
+    </label>
+    <label>
+      <span>Category</span>
+      <select name="category">
+        <option value="">All</option>
+        {% for id, label in categories %}
+        <option value="{{ id }}" {% if category == id %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      <span>Sort</span>
+      <select name="sort">
+        {% for id, label in sort_options %}
+        <option value="{{ id }}" {% if sort == id %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="check">
+      <input type="checkbox" name="cookable" value="true" {% if cookable %}checked{% endif %}>
+      Cookable only
+    </label>
+    <button type="submit">Filter</button>
+  </form>
+  <p class="meta">{{ rows|length }} shown · {{ cookable_count }} cookable now</p>
+</section>
+
+{% if rows %}
+<div class="recipe-list">
+  {% for row in rows %}
+  {% set recipe = row.recipe %}
+  {% set status = row.status %}
+  <article class="recipe-card {% if status.cookable %}cookable{% endif %}" data-recipe-id="{{ recipe.id }}">
+    <header>
+      <h2>{{ recipe.name }}</h2>
+      <span class="pill">{{ row.category_label }}</span>
+    </header>
+    <p class="facts">
+      {% if recipe.sale_price is not none %}<span>{{ recipe.sale_price }}G</span>{% endif %}
+      {% if row.utensil_label %}<span>{{ row.utensil_label }}</span>{% endif %}
+      {% if recipe.meal_power %}<span>{{ recipe.meal_power }}</span>{% endif %}
+    </p>
+    <ul class="slots">
+      {% for slot in recipe.ingredients %}
+      <li>{{ slot.quantity }}× {{ slot.display }}</li>
+      {% endfor %}
+    </ul>
+    {% if recipe.adapt %}
+    <p class="adapt">Adapt: {{ recipe.adapt | join(", ") }}</p>
+    {% endif %}
+    {% if status.cookable %}
+    <p class="ready">Ready to cook · up to {{ status.max_cookable }}</p>
+    <button type="button" class="cook-btn" data-cook="{{ recipe.id }}">Cook</button>
+    {% else %}
+    <ul class="missing">
+      {% if status.missing_utensil %}
+      <li>Need appliance: {{ row.utensil_label }}</li>
+      {% endif %}
+      {% for miss in status.missing_slots %}
+      <li>Missing {{ miss.quantity }}× {{ miss.display }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">No recipes match those filters.</p>
+{% endif %}
+
+<dialog id="cook-dialog">
+  <form id="cook-form" method="dialog">
+    <h2 id="cook-title">Cook</h2>
+    <p id="cook-utensil" class="facts"></p>
+    <label>
+      <span>Quantity cooked</span>
+      <input type="number" id="cook-qty" min="1" value="1">
+    </label>
+    <div id="cook-slots"></div>
+    <p id="cook-error" class="error" hidden></p>
+    <footer>
+      <button type="button" id="cook-cancel" value="cancel">Cancel</button>
+      <button type="submit" id="cook-confirm">Confirm cook</button>
+    </footer>
+  </form>
+</dialog>
+{% endblock %}
+{% block scripts %}
+<script src="/static/cook.js"></script>
+{% endblock %}

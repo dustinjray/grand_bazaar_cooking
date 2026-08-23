@@ -1,0 +1,3786 @@
+{
+  "families": {
+    "egg": {
+      "display": "Any Egg",
+      "bases": [
+        "egg"
+      ]
+    },
+    "milk": {
+      "display": "Any Milk",
+      "bases": [
+        "milk"
+      ]
+    },
+    "cheese": {
+      "display": "Any Cheese",
+      "bases": [
+        "cheese"
+      ]
+    },
+    "butter": {
+      "display": "Any Butter",
+      "bases": [
+        "butter"
+      ]
+    },
+    "mayonnaise": {
+      "display": "Any Mayonnaise",
+      "bases": [
+        "mayonnaise"
+      ]
+    },
+    "yogurt": {
+      "display": "Any Yogurt",
+      "bases": [
+        "yogurt"
+      ]
+    },
+    "honey": {
+      "display": "Any Honey",
+      "bases": [
+        "honey"
+      ]
+    },
+    "oil": {
+      "display": "Any Oil",
+      "bases": [
+        "oil"
+      ]
+    },
+    "mushroom": {
+      "display": "Any Mushroom",
+      "bases": [
+        "mushroom"
+      ]
+    },
+    "herb": {
+      "display": "Any Herb",
+      "bases": [
+        "mint",
+        "chamomile",
+        "lavender"
+      ]
+    },
+    "bread": {
+      "display": "Any Bread",
+      "bases": [
+        "bread"
+      ]
+    },
+    "bread_toast": {
+      "display": "Bread or White Bread",
+      "bases": [
+        "bread_toast"
+      ]
+    },
+    "breadcrumb": {
+      "display": "Any Breadcrumbs",
+      "bases": [
+        "breadcrumbs"
+      ]
+    },
+    "flour": {
+      "display": "Wheat or Rice Flour",
+      "bases": [
+        "flour"
+      ]
+    },
+    "jam": {
+      "display": "Any Jam",
+      "bases": [
+        "jam"
+      ]
+    },
+    "vegetable_a": {
+      "display": "Vegetable A",
+      "bases": [
+        "vegetable_a"
+      ]
+    },
+    "vegetable_b": {
+      "display": "Vegetable B",
+      "bases": [
+        "vegetable_b"
+      ]
+    },
+    "vegetable_c": {
+      "display": "Vegetable C",
+      "bases": [
+        "vegetable_c"
+      ]
+    },
+    "vegetable_d": {
+      "display": "Vegetable D",
+      "bases": [
+        "vegetable_d"
+      ]
+    },
+    "vegetable_e": {
+      "display": "Vegetable E",
+      "bases": [
+        "vegetable_e"
+      ]
+    },
+    "fruit_a": {
+      "display": "Fruit A",
+      "bases": [
+        "fruit_a"
+      ]
+    },
+    "fruit_b": {
+      "display": "Fruit B",
+      "bases": [
+        "fruit_b"
+      ]
+    },
+    "fish_a": {
+      "display": "Fish A",
+      "bases": [
+        "fish_a"
+      ]
+    },
+    "fish_b": {
+      "display": "Fish B",
+      "bases": [
+        "fish_b"
+      ]
+    },
+    "fish_c": {
+      "display": "Fish C",
+      "bases": [
+        "fish_c"
+      ]
+    },
+    "fish_d": {
+      "display": "Fish D",
+      "bases": [
+        "fish_d"
+      ]
+    },
+    "fish_e": {
+      "display": "Fish E",
+      "bases": [
+        "fish_e"
+      ]
+    },
+    "eel": {
+      "display": "Eel",
+      "bases": [
+        "eel"
+      ]
+    },
+    "tofu_miso": {
+      "display": "Miso Soup extra",
+      "bases": [
+        "tofu_miso"
+      ]
+    }
+  },
+  "items": {
+    "egg": {
+      "name": "Egg",
+      "family": "egg",
+      "variant": "chicken",
+      "is_plus": false,
+      "fills": [
+        "egg"
+      ]
+    },
+    "egg_plus": {
+      "name": "Egg+",
+      "family": "egg",
+      "variant": "chicken",
+      "is_plus": true,
+      "fills": [
+        "egg",
+        "egg_plus"
+      ]
+    },
+    "silkie_egg": {
+      "name": "Silkie Egg",
+      "family": "egg",
+      "variant": "silkie",
+      "is_plus": false,
+      "fills": [
+        "egg",
+        "silkie_egg"
+      ]
+    },
+    "silkie_egg_plus": {
+      "name": "Silkie Egg+",
+      "family": "egg",
+      "variant": "silkie",
+      "is_plus": true,
+      "fills": [
+        "egg",
+        "egg_plus",
+        "silkie_egg",
+        "silkie_egg_plus"
+      ]
+    },
+    "milk": {
+      "name": "Milk",
+      "family": "milk",
+      "variant": "cow",
+      "is_plus": false,
+      "fills": [
+        "milk"
+      ]
+    },
+    "milk_plus": {
+      "name": "Milk+",
+      "family": "milk",
+      "variant": "cow",
+      "is_plus": true,
+      "fills": [
+        "milk",
+        "milk_plus"
+      ]
+    },
+    "buffalo_milk": {
+      "name": "Buffalo Milk",
+      "family": "milk",
+      "variant": "buffalo",
+      "is_plus": false,
+      "fills": [
+        "milk",
+        "buffalo_milk"
+      ]
+    },
+    "buffalo_milk_plus": {
+      "name": "Buffalo Milk+",
+      "family": "milk",
+      "variant": "buffalo",
+      "is_plus": true,
+      "fills": [
+        "milk",
+        "milk_plus",
+        "buffalo_milk",
+        "buffalo_milk_plus"
+      ]
+    },
+    "cheese": {
+      "name": "Cheese",
+      "family": "cheese",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cheese"
+      ]
+    },
+    "cheese_plus": {
+      "name": "Cheese+",
+      "family": "cheese",
+      "variant": null,
+      "is_plus": true,
+      "fills": [
+        "cheese",
+        "cheese_plus"
+      ]
+    },
+    "herb_cheese": {
+      "name": "Herb Cheese",
+      "family": "cheese",
+      "variant": "herb",
+      "is_plus": false,
+      "fills": [
+        "cheese",
+        "herb_cheese"
+      ]
+    },
+    "butter": {
+      "name": "Butter",
+      "family": "butter",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "butter"
+      ]
+    },
+    "butter_plus": {
+      "name": "Butter+",
+      "family": "butter",
+      "variant": null,
+      "is_plus": true,
+      "fills": [
+        "butter",
+        "butter_plus"
+      ]
+    },
+    "herb_butter": {
+      "name": "Herb Butter",
+      "family": "butter",
+      "variant": "herb",
+      "is_plus": false,
+      "fills": [
+        "butter",
+        "herb_butter"
+      ]
+    },
+    "mayonnaise": {
+      "name": "Mayonnaise",
+      "family": "mayonnaise",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mayonnaise"
+      ]
+    },
+    "mayonnaise_plus": {
+      "name": "Mayonnaise+",
+      "family": "mayonnaise",
+      "variant": null,
+      "is_plus": true,
+      "fills": [
+        "mayonnaise",
+        "mayonnaise_plus"
+      ]
+    },
+    "herb_mayonnaise": {
+      "name": "Herb Mayonnaise",
+      "family": "mayonnaise",
+      "variant": "herb",
+      "is_plus": false,
+      "fills": [
+        "mayonnaise",
+        "herb_mayonnaise"
+      ]
+    },
+    "yogurt": {
+      "name": "Yogurt",
+      "family": "yogurt",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "yogurt"
+      ]
+    },
+    "yogurt_plus": {
+      "name": "Yogurt+",
+      "family": "yogurt",
+      "variant": null,
+      "is_plus": true,
+      "fills": [
+        "yogurt",
+        "yogurt_plus"
+      ]
+    },
+    "honey": {
+      "name": "Honey",
+      "family": "honey",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "honey"
+      ]
+    },
+    "invigorating_honey": {
+      "name": "Invigorating Honey",
+      "family": "honey",
+      "variant": "invigorating",
+      "is_plus": false,
+      "fills": [
+        "honey",
+        "invigorating_honey"
+      ]
+    },
+    "mellow_honey": {
+      "name": "Mellow Honey",
+      "family": "honey",
+      "variant": "mellow",
+      "is_plus": false,
+      "fills": [
+        "honey",
+        "mellow_honey"
+      ]
+    },
+    "royal_honey": {
+      "name": "Royal Honey",
+      "family": "honey",
+      "variant": "royal",
+      "is_plus": false,
+      "fills": [
+        "honey",
+        "royal_honey"
+      ]
+    },
+    "oil": {
+      "name": "Oil",
+      "family": "oil",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "oil"
+      ]
+    },
+    "nut_oil": {
+      "name": "Nut Oil",
+      "family": "oil",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "oil",
+        "nut_oil"
+      ]
+    },
+    "herb_oil": {
+      "name": "Herb Oil",
+      "family": "oil",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "oil",
+        "herb_oil"
+      ]
+    },
+    "olive_oil": {
+      "name": "Olive Oil",
+      "family": "oil",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "oil",
+        "olive_oil"
+      ]
+    },
+    "grape_oil": {
+      "name": "Grape Oil",
+      "family": "oil",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "oil",
+        "grape_oil"
+      ]
+    },
+    "common_mushroom": {
+      "name": "Common Mushroom",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "common_mushroom",
+        "mushroom",
+        "vegetable_c"
+      ]
+    },
+    "shiitake": {
+      "name": "Shiitake",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "shiitake",
+        "mushroom",
+        "vegetable_e"
+      ]
+    },
+    "shimeji": {
+      "name": "Shimeji",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "shimeji",
+        "mushroom"
+      ]
+    },
+    "porcini": {
+      "name": "Porcini",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "porcini",
+        "mushroom"
+      ]
+    },
+    "morel": {
+      "name": "Morel",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "morel",
+        "mushroom"
+      ]
+    },
+    "matsutake": {
+      "name": "Matsutake",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "matsutake",
+        "mushroom"
+      ]
+    },
+    "monarch_mushroom": {
+      "name": "Monarch Mushroom",
+      "family": "mushroom",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "monarch_mushroom",
+        "mushroom"
+      ]
+    },
+    "mint": {
+      "name": "Mint",
+      "family": "herb",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mint"
+      ]
+    },
+    "chamomile": {
+      "name": "Chamomile",
+      "family": "herb",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "chamomile"
+      ]
+    },
+    "lavender": {
+      "name": "Lavender",
+      "family": "herb",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "lavender"
+      ]
+    },
+    "bread": {
+      "name": "Bread",
+      "family": "bread",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bread",
+        "bread_toast"
+      ]
+    },
+    "white_bread": {
+      "name": "White Bread",
+      "family": "bread",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bread",
+        "white_bread",
+        "bread_toast"
+      ]
+    },
+    "baguette": {
+      "name": "Baguette",
+      "family": "bread",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bread",
+        "baguette"
+      ]
+    },
+    "focaccia": {
+      "name": "Focaccia",
+      "family": "bread",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bread",
+        "focaccia"
+      ]
+    },
+    "breadcrumbs": {
+      "name": "Breadcrumbs",
+      "family": "breadcrumb",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "breadcrumbs"
+      ]
+    },
+    "white_breadcrumbs": {
+      "name": "White Breadcrumbs",
+      "family": "breadcrumb",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "breadcrumbs",
+        "white_breadcrumbs"
+      ]
+    },
+    "wheat_flour": {
+      "name": "Wheat Flour",
+      "family": "flour",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "wheat_flour",
+        "flour"
+      ]
+    },
+    "rice_flour": {
+      "name": "Rice Flour",
+      "family": "flour",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "rice_flour",
+        "flour"
+      ]
+    },
+    "buckwheat_flour": {
+      "name": "Buckwheat Flour",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "buckwheat_flour"
+      ]
+    },
+    "refined_rice_flour": {
+      "name": "Refined Rice Flour",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "refined_rice_flour"
+      ]
+    },
+    "soybean_flour": {
+      "name": "Soybean Flour",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "soybean_flour"
+      ]
+    },
+    "apple_jam": {
+      "name": "Apple Jam",
+      "family": "jam",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "apple_jam",
+        "jam"
+      ]
+    },
+    "strawberry_jam": {
+      "name": "Strawberry Jam",
+      "family": "jam",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "strawberry_jam",
+        "jam"
+      ]
+    },
+    "grape_jam": {
+      "name": "Grape Jam",
+      "family": "jam",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "grape_jam",
+        "jam"
+      ]
+    },
+    "blueberry_jam": {
+      "name": "Blueberry Jam",
+      "family": "jam",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "blueberry_jam",
+        "jam"
+      ]
+    },
+    "cucumber": {
+      "name": "Cucumber",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cucumber",
+        "vegetable_a"
+      ]
+    },
+    "onion": {
+      "name": "Onion",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "onion",
+        "vegetable_a",
+        "vegetable_d"
+      ]
+    },
+    "asparagus": {
+      "name": "Asparagus",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "asparagus",
+        "vegetable_a",
+        "vegetable_b",
+        "vegetable_c"
+      ]
+    },
+    "tomato": {
+      "name": "Tomato",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "tomato",
+        "vegetable_a"
+      ]
+    },
+    "red_bell_pepper": {
+      "name": "Red Bell Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "red_bell_pepper",
+        "vegetable_a",
+        "vegetable_c"
+      ]
+    },
+    "green_bell_pepper": {
+      "name": "Green Bell Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_bell_pepper"
+      ]
+    },
+    "carrot": {
+      "name": "Carrot",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "carrot",
+        "vegetable_a",
+        "vegetable_b",
+        "vegetable_c",
+        "vegetable_d"
+      ]
+    },
+    "turnip": {
+      "name": "Turnip",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "turnip",
+        "vegetable_a",
+        "vegetable_b"
+      ]
+    },
+    "sweet_potato": {
+      "name": "Sweet Potato",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sweet_potato",
+        "vegetable_a",
+        "vegetable_e"
+      ]
+    },
+    "pumpkin": {
+      "name": "Pumpkin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pumpkin",
+        "vegetable_a",
+        "vegetable_c",
+        "vegetable_e"
+      ]
+    },
+    "eggplant": {
+      "name": "Eggplant",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "eggplant",
+        "vegetable_a",
+        "vegetable_e"
+      ]
+    },
+    "potato": {
+      "name": "Potato",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "potato",
+        "vegetable_b",
+        "vegetable_c",
+        "vegetable_d"
+      ]
+    },
+    "cabbage": {
+      "name": "Cabbage",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cabbage",
+        "vegetable_b"
+      ]
+    },
+    "cauliflower": {
+      "name": "Cauliflower",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cauliflower",
+        "vegetable_b"
+      ]
+    },
+    "broccoli": {
+      "name": "Broccoli",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "broccoli",
+        "vegetable_c"
+      ]
+    },
+    "napa_cabbage": {
+      "name": "Napa Cabbage",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "napa_cabbage"
+      ]
+    },
+    "bok_choy": {
+      "name": "Bok Choy",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bok_choy"
+      ]
+    },
+    "spinach": {
+      "name": "Spinach",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "spinach"
+      ]
+    },
+    "garlic": {
+      "name": "Garlic",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "garlic"
+      ]
+    },
+    "chili_pepper": {
+      "name": "Chili Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "chili_pepper"
+      ]
+    },
+    "green_onion": {
+      "name": "Green Onion",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_onion"
+      ]
+    },
+    "daikon_radish": {
+      "name": "Daikon Radish",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "daikon_radish"
+      ]
+    },
+    "radish": {
+      "name": "Radish",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "radish"
+      ]
+    },
+    "burdock": {
+      "name": "Burdock",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "burdock"
+      ]
+    },
+    "corn": {
+      "name": "Corn",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "corn"
+      ]
+    },
+    "avocado": {
+      "name": "Avocado",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "avocado"
+      ]
+    },
+    "lemon": {
+      "name": "Lemon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "lemon"
+      ]
+    },
+    "apple": {
+      "name": "Apple",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "apple",
+        "fruit_b"
+      ]
+    },
+    "cherry": {
+      "name": "Cherry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cherry",
+        "fruit_a"
+      ]
+    },
+    "blueberry": {
+      "name": "Blueberry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "blueberry",
+        "fruit_a"
+      ]
+    },
+    "green_grape": {
+      "name": "Green Grape",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_grape",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "red_grape": {
+      "name": "Red Grape",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "red_grape",
+        "fruit_b"
+      ]
+    },
+    "strawberry": {
+      "name": "Strawberry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "strawberry",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "mango": {
+      "name": "Mango",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mango",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "pineapple": {
+      "name": "Pineapple",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pineapple",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "banana": {
+      "name": "Banana",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "banana",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "peach": {
+      "name": "Peach",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "peach",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "orange": {
+      "name": "Orange",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "orange",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "melon": {
+      "name": "Melon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "melon",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "watermelon": {
+      "name": "Watermelon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "watermelon"
+      ]
+    },
+    "chestnut": {
+      "name": "Chestnut",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "chestnut"
+      ]
+    },
+    "olive": {
+      "name": "Olive",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "olive"
+      ]
+    },
+    "almond": {
+      "name": "Almond",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "almond"
+      ]
+    },
+    "coffee_bean": {
+      "name": "Coffee Bean",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "coffee_bean"
+      ]
+    },
+    "ball_eggplant": {
+      "name": "Ball Eggplant",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "eggplant",
+        "ball_eggplant",
+        "vegetable_a",
+        "vegetable_e"
+      ]
+    },
+    "brawny_green_onion": {
+      "name": "Brawny Green Onion",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_onion",
+        "brawny_green_onion"
+      ]
+    },
+    "brawny_onion": {
+      "name": "Brawny Onion",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "onion",
+        "brawny_onion",
+        "vegetable_a",
+        "vegetable_d"
+      ]
+    },
+    "calabash_radish": {
+      "name": "Calabash Radish",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "radish",
+        "calabash_radish"
+      ]
+    },
+    "chicken_mango": {
+      "name": "Chicken Mango",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mango",
+        "chicken_mango",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "curled_chili_pepper": {
+      "name": "Curled Chili Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "chili_pepper",
+        "curled_chili_pepper"
+      ]
+    },
+    "dancing_green_bell_pepper": {
+      "name": "Dancing Green Bell Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_bell_pepper",
+        "dancing_green_bell_pepper"
+      ]
+    },
+    "dancing_red_bell_pepper": {
+      "name": "Dancing Red Bell Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "red_bell_pepper",
+        "dancing_red_bell_pepper",
+        "vegetable_a",
+        "vegetable_c"
+      ]
+    },
+    "finger_green_grapes": {
+      "name": "Finger Green Grapes",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_grape",
+        "finger_green_grapes",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "finger_red_grapes": {
+      "name": "Finger Red Grapes",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "red_grape",
+        "finger_red_grapes",
+        "fruit_b"
+      ]
+    },
+    "flower_blueberry": {
+      "name": "Flower Blueberry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "blueberry",
+        "flower_blueberry",
+        "fruit_a"
+      ]
+    },
+    "fork_root_daikon": {
+      "name": "Fork-Root Daikon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "daikon_radish",
+        "fork_root_daikon"
+      ]
+    },
+    "giant_avocado": {
+      "name": "Giant Avocado",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "avocado",
+        "giant_avocado"
+      ]
+    },
+    "giant_cabbage": {
+      "name": "Giant Cabbage",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cabbage",
+        "giant_cabbage",
+        "vegetable_b"
+      ]
+    },
+    "giant_pumpkin": {
+      "name": "Giant Pumpkin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pumpkin",
+        "giant_pumpkin",
+        "vegetable_a",
+        "vegetable_c",
+        "vegetable_e"
+      ]
+    },
+    "giant_sweet_potato": {
+      "name": "Giant Sweet Potato",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sweet_potato",
+        "giant_sweet_potato",
+        "vegetable_a",
+        "vegetable_e"
+      ]
+    },
+    "giant_tomato": {
+      "name": "Giant Tomato",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "tomato",
+        "giant_tomato",
+        "vegetable_a"
+      ]
+    },
+    "giant_turnip": {
+      "name": "Giant Turnip",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "turnip",
+        "giant_turnip",
+        "vegetable_a",
+        "vegetable_b"
+      ]
+    },
+    "golden_apple": {
+      "name": "Golden Apple",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "apple",
+        "golden_apple",
+        "fruit_b"
+      ]
+    },
+    "golden_banana": {
+      "name": "Golden Banana",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "banana",
+        "golden_banana",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "golden_bok_choy": {
+      "name": "Golden Bok Choy",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bok_choy",
+        "golden_bok_choy"
+      ]
+    },
+    "golden_cacao_bean": {
+      "name": "Golden Cacao Bean",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cacao_bean",
+        "golden_cacao_bean"
+      ]
+    },
+    "golden_coffee_bean": {
+      "name": "Golden Coffee Bean",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "coffee_bean",
+        "golden_coffee_bean"
+      ]
+    },
+    "golden_garlic": {
+      "name": "Golden Garlic",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "garlic",
+        "golden_garlic"
+      ]
+    },
+    "golden_napa_cabbage": {
+      "name": "Golden Napa Cabbage",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "napa_cabbage",
+        "golden_napa_cabbage"
+      ]
+    },
+    "golden_olive": {
+      "name": "Golden Olive",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "olive",
+        "golden_olive"
+      ]
+    },
+    "golden_peach": {
+      "name": "Golden Peach",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "peach",
+        "golden_peach",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "golden_strawberry": {
+      "name": "Golden Strawberry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "strawberry",
+        "golden_strawberry",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "heart_cherry": {
+      "name": "Heart Cherry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cherry",
+        "heart_cherry",
+        "fruit_a"
+      ]
+    },
+    "heart_lemon": {
+      "name": "Heart Lemon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "lemon",
+        "heart_lemon"
+      ]
+    },
+    "heart_spinach": {
+      "name": "Heart Spinach",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "spinach",
+        "heart_spinach"
+      ]
+    },
+    "heart_watermelon": {
+      "name": "Heart Watermelon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "watermelon",
+        "heart_watermelon"
+      ]
+    },
+    "jewel_almond": {
+      "name": "Jewel Almond",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "almond",
+        "jewel_almond"
+      ]
+    },
+    "jewel_melon": {
+      "name": "Jewel Melon",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "melon",
+        "jewel_melon",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "jewel_pineapple": {
+      "name": "Jewel Pineapple",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pineapple",
+        "jewel_pineapple",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "lumpy_orange": {
+      "name": "Lumpy Orange",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "orange",
+        "lumpy_orange",
+        "fruit_a",
+        "fruit_b"
+      ]
+    },
+    "mosaic_corn": {
+      "name": "Mosaic Corn",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "corn",
+        "mosaic_corn"
+      ]
+    },
+    "pom_pom_broccoli": {
+      "name": "Pom-pom Broccoli",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "broccoli",
+        "pom_pom_broccoli",
+        "vegetable_c"
+      ]
+    },
+    "purple_cauliflower": {
+      "name": "Purple Cauliflower",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cauliflower",
+        "purple_cauliflower",
+        "vegetable_b"
+      ]
+    },
+    "star_potato": {
+      "name": "Star Potato",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "potato",
+        "star_potato",
+        "vegetable_b",
+        "vegetable_c",
+        "vegetable_d"
+      ]
+    },
+    "three_forked_carrot": {
+      "name": "Three-Forked Carrot",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "carrot",
+        "three_forked_carrot",
+        "vegetable_a",
+        "vegetable_b",
+        "vegetable_c",
+        "vegetable_d"
+      ]
+    },
+    "twisted_asparagus": {
+      "name": "Twisted Asparagus",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "asparagus",
+        "twisted_asparagus",
+        "vegetable_a",
+        "vegetable_b",
+        "vegetable_c"
+      ]
+    },
+    "twisted_burdock": {
+      "name": "Twisted Burdock",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "burdock",
+        "twisted_burdock"
+      ]
+    },
+    "wavy_cucumber": {
+      "name": "Wavy Cucumber",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cucumber",
+        "wavy_cucumber",
+        "vegetable_a"
+      ]
+    },
+    "yellow_perch": {
+      "name": "Yellow Perch",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "yellow_perch",
+        "fish_a",
+        "fish_d"
+      ]
+    },
+    "snakehead": {
+      "name": "Snakehead",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "snakehead",
+        "fish_a"
+      ]
+    },
+    "masu_trout": {
+      "name": "Masu Trout",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "masu_trout",
+        "fish_a",
+        "fish_d"
+      ]
+    },
+    "char": {
+      "name": "Char",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "char",
+        "fish_a"
+      ]
+    },
+    "salmon": {
+      "name": "Salmon",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "salmon",
+        "fish_a",
+        "fish_d"
+      ]
+    },
+    "icefish": {
+      "name": "Icefish",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "icefish",
+        "fish_a",
+        "vegetable_e"
+      ]
+    },
+    "cherry_salmon": {
+      "name": "Cherry Salmon",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cherry_salmon",
+        "fish_a",
+        "fish_d"
+      ]
+    },
+    "bluegill": {
+      "name": "Bluegill",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bluegill",
+        "fish_b"
+      ]
+    },
+    "willow_shiner": {
+      "name": "Willow Shiner",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "willow_shiner",
+        "fish_b"
+      ]
+    },
+    "killifish": {
+      "name": "Killifish",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "killifish",
+        "fish_b"
+      ]
+    },
+    "stone_moroko": {
+      "name": "Stone Moroko",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "stone_moroko",
+        "fish_b"
+      ]
+    },
+    "pond_smelt": {
+      "name": "Pond Smelt",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pond_smelt",
+        "fish_b",
+        "vegetable_e"
+      ]
+    },
+    "sweetfish": {
+      "name": "Sweetfish",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sweetfish",
+        "fish_b",
+        "fish_d"
+      ]
+    },
+    "eel": {
+      "name": "Eel",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "eel",
+        "fish_b"
+      ]
+    },
+    "marbled_eel": {
+      "name": "Marbled Eel",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "marbled_eel",
+        "fish_b",
+        "eel"
+      ]
+    },
+    "goldfish": {
+      "name": "Goldfish",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "goldfish",
+        "fish_b"
+      ]
+    },
+    "crucian_carp": {
+      "name": "Crucian Carp",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "crucian_carp",
+        "fish_b"
+      ]
+    },
+    "amur_minnow": {
+      "name": "Amur Minnow",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "amur_minnow",
+        "fish_c"
+      ]
+    },
+    "dace": {
+      "name": "Dace",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "dace",
+        "fish_c"
+      ]
+    },
+    "pale_chub": {
+      "name": "Pale Chub",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pale_chub",
+        "fish_c"
+      ]
+    },
+    "sculpin": {
+      "name": "Sculpin",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sculpin",
+        "fish_c"
+      ]
+    },
+    "dark_chub": {
+      "name": "Dark Chub",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "dark_chub",
+        "fish_c"
+      ]
+    },
+    "bitterling": {
+      "name": "Bitterling",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bitterling",
+        "fish_c"
+      ]
+    },
+    "tamoroko": {
+      "name": "Tamoroko",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "tamoroko",
+        "fish_c"
+      ]
+    },
+    "rainbow_trout": {
+      "name": "Rainbow Trout",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "rainbow_trout",
+        "fish_c"
+      ]
+    },
+    "silver_carp": {
+      "name": "Silver Carp",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "silver_carp",
+        "fish_c"
+      ]
+    },
+    "basa": {
+      "name": "Basa",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "basa",
+        "fish_c"
+      ]
+    },
+    "nile_perch": {
+      "name": "Nile Perch",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "nile_perch",
+        "fish_d",
+        "fish_e"
+      ]
+    },
+    "brown_trout": {
+      "name": "Brown Trout",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "brown_trout",
+        "fish_d",
+        "fish_e"
+      ]
+    },
+    "grayling": {
+      "name": "Grayling",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "grayling",
+        "fish_e"
+      ]
+    },
+    "bighead_carp": {
+      "name": "Bighead Carp",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bighead_carp",
+        "fish_e"
+      ]
+    },
+    "barbel_steed": {
+      "name": "Barbel Steed",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "barbel_steed",
+        "fish_e"
+      ]
+    },
+    "three_lips_carp": {
+      "name": "Three-Lips Carp",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "three_lips_carp",
+        "fish_e"
+      ]
+    },
+    "black_bass": {
+      "name": "Black Bass",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "black_bass",
+        "fish_e"
+      ]
+    },
+    "mugitsuku": {
+      "name": "Mugitsuku",
+      "family": "fish",
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mugitsuku",
+        "fish_e"
+      ]
+    },
+    "tofu": {
+      "name": "Tofu",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "tofu",
+        "tofu_miso"
+      ]
+    },
+    "fried_tofu": {
+      "name": "Fried Tofu",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "fried_tofu",
+        "tofu_miso"
+      ]
+    },
+    "fish_cake": {
+      "name": "Fish Cake",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "fish_cake"
+      ]
+    },
+    "seaweed": {
+      "name": "Seaweed",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "seaweed"
+      ]
+    },
+    "urchin": {
+      "name": "Urchin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "urchin"
+      ]
+    },
+    "miso": {
+      "name": "Miso",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "miso"
+      ]
+    },
+    "soy_sauce": {
+      "name": "Soy Sauce",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "soy_sauce"
+      ]
+    },
+    "sugar": {
+      "name": "Sugar",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sugar"
+      ]
+    },
+    "salt": {
+      "name": "Salt",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "salt"
+      ]
+    },
+    "pepper": {
+      "name": "Pepper",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pepper"
+      ]
+    },
+    "vinegar": {
+      "name": "Vinegar",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "vinegar"
+      ]
+    },
+    "spice": {
+      "name": "Spice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "spice"
+      ]
+    },
+    "curry_powder": {
+      "name": "Curry Powder",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "curry_powder"
+      ]
+    },
+    "soybean": {
+      "name": "Soybean",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "soybean"
+      ]
+    },
+    "soy_milk": {
+      "name": "Soy Milk",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "soy_milk"
+      ]
+    },
+    "chocolate": {
+      "name": "Chocolate",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "chocolate"
+      ]
+    },
+    "walnut": {
+      "name": "Walnut",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "walnut"
+      ]
+    },
+    "cacao_bean": {
+      "name": "Cacao Bean",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cacao_bean"
+      ]
+    },
+    "coffee_pack": {
+      "name": "Coffee Pack",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "coffee_pack"
+      ]
+    },
+    "hot_coffee": {
+      "name": "Hot Coffee",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "hot_coffee"
+      ]
+    },
+    "pasta": {
+      "name": "Pasta",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pasta"
+      ]
+    },
+    "herb_pasta": {
+      "name": "Herb Pasta",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "herb_pasta"
+      ]
+    },
+    "penne_pasta": {
+      "name": "Penne Pasta",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "penne_pasta"
+      ]
+    },
+    "rice": {
+      "name": "Rice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "rice"
+      ]
+    },
+    "cooked_rice": {
+      "name": "Cooked Rice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cooked_rice"
+      ]
+    },
+    "sashimi": {
+      "name": "Sashimi",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sashimi"
+      ]
+    },
+    "tempura": {
+      "name": "Tempura",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "tempura"
+      ]
+    },
+    "omelet": {
+      "name": "Omelet",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "omelet"
+      ]
+    },
+    "onigiri": {
+      "name": "Onigiri",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "onigiri"
+      ]
+    },
+    "mixed_salad": {
+      "name": "Mixed Salad",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mixed_salad"
+      ]
+    },
+    "castella": {
+      "name": "Castella",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "castella"
+      ]
+    },
+    "mochi": {
+      "name": "Mochi",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mochi"
+      ]
+    },
+    "bottled_chestnuts": {
+      "name": "Bottled Chestnuts",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bottled_chestnuts"
+      ]
+    },
+    "bottled_walnuts": {
+      "name": "Bottled Walnuts",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "bottled_walnuts"
+      ]
+    },
+    "cookies": {
+      "name": "Cookies",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cookies"
+      ]
+    },
+    "curry_rice": {
+      "name": "Curry Rice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "curry_rice"
+      ]
+    },
+    "supreme_curry": {
+      "name": "Supreme Curry",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "supreme_curry"
+      ]
+    },
+    "summer_tea_leaves": {
+      "name": "Summer Tea Leaves",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "summer_tea_leaves"
+      ]
+    },
+    "ice_cream": {
+      "name": "Ice Cream",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "ice_cream"
+      ]
+    },
+    "black_tea_tin": {
+      "name": "Black Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "black_tea_tin"
+      ]
+    },
+    "summer_blend_tea_can": {
+      "name": "Summer Blend Tea Can",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "summer_blend_tea_can"
+      ]
+    },
+    "golden_blend_tea_tin": {
+      "name": "Golden Blend Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "golden_blend_tea_tin"
+      ]
+    },
+    "watermelon_tea_tin": {
+      "name": "Watermelon Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "watermelon_tea_tin"
+      ]
+    },
+    "melon_tea_tin": {
+      "name": "Melon Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "melon_tea_tin"
+      ]
+    },
+    "pineapple_tea_tin": {
+      "name": "Pineapple Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "pineapple_tea_tin"
+      ]
+    },
+    "spring_blend_tea_tin": {
+      "name": "Spring Blend Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "spring_blend_tea_tin"
+      ]
+    },
+    "strawberry_tea_tin": {
+      "name": "Strawberry Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "strawberry_tea_tin"
+      ]
+    },
+    "sencha_tea_tin": {
+      "name": "Sencha Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "sencha_tea_tin"
+      ]
+    },
+    "puer_tea_tin": {
+      "name": "Pu'er Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "puer_tea_tin"
+      ]
+    },
+    "oolong_tea_tin": {
+      "name": "Oolong Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "oolong_tea_tin"
+      ]
+    },
+    "matcha_tea_tin": {
+      "name": "Matcha Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "matcha_tea_tin"
+      ]
+    },
+    "mint_tea_tin": {
+      "name": "Mint Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mint_tea_tin"
+      ]
+    },
+    "chamomile_tea_tin": {
+      "name": "Chamomile Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "chamomile_tea_tin"
+      ]
+    },
+    "lavender_tea_tin": {
+      "name": "Lavender Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "lavender_tea_tin"
+      ]
+    },
+    "green_tea_tin": {
+      "name": "Green Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_tea_tin"
+      ]
+    },
+    "autumn_blend_tea_tin": {
+      "name": "Autumn Blend Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "autumn_blend_tea_tin"
+      ]
+    },
+    "banana_tea_tin": {
+      "name": "Banana Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "banana_tea_tin"
+      ]
+    },
+    "mango_tea_tin": {
+      "name": "Mango Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "mango_tea_tin"
+      ]
+    },
+    "green_grape_tea_tin": {
+      "name": "Green Grape Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "green_grape_tea_tin"
+      ]
+    },
+    "red_grape_tea_tin": {
+      "name": "Red Grape Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "red_grape_tea_tin"
+      ]
+    },
+    "apple_tea_tin": {
+      "name": "Apple Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "apple_tea_tin"
+      ]
+    },
+    "cherry_tea_tin": {
+      "name": "Cherry Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cherry_tea_tin"
+      ]
+    },
+    "peach_tea_tin": {
+      "name": "Peach Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "peach_tea_tin"
+      ]
+    },
+    "orange_tea_tin": {
+      "name": "Orange Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "orange_tea_tin"
+      ]
+    },
+    "lemon_tea_tin": {
+      "name": "Lemon Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "lemon_tea_tin"
+      ]
+    },
+    "blueberry_tea_tin": {
+      "name": "Blueberry Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "blueberry_tea_tin"
+      ]
+    },
+    "olive_tea_tin": {
+      "name": "Olive Tea Tin",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "olive_tea_tin"
+      ]
+    },
+    "banana_juice": {
+      "name": "Banana Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "banana_juice"
+      ]
+    },
+    "peach_juice": {
+      "name": "Peach Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "peach_juice"
+      ]
+    },
+    "lemon_juice": {
+      "name": "Lemon Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "lemon_juice"
+      ]
+    },
+    "strawberry_juice": {
+      "name": "Strawberry Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "strawberry_juice"
+      ]
+    },
+    "orange_juice": {
+      "name": "Orange Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "orange_juice"
+      ]
+    },
+    "cherry_juice": {
+      "name": "Cherry Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "cherry_juice"
+      ]
+    },
+    "grape_juice": {
+      "name": "Grape Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "grape_juice"
+      ]
+    },
+    "blueberry_juice": {
+      "name": "Blueberry Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "blueberry_juice"
+      ]
+    },
+    "apple_juice": {
+      "name": "Apple Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "apple_juice"
+      ]
+    },
+    "spring_juice": {
+      "name": "Spring Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "spring_juice"
+      ]
+    },
+    "summer_juice": {
+      "name": "Summer Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "summer_juice"
+      ]
+    },
+    "autumn_juice": {
+      "name": "Autumn Juice",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "autumn_juice"
+      ]
+    },
+    "black_tea": {
+      "name": "Black Tea",
+      "family": null,
+      "variant": null,
+      "is_plus": false,
+      "fills": [
+        "black_tea"
+      ]
+    }
+  },
+  "aliases": {
+    "egg": {
+      "family": "egg"
+    },
+    "eggs": {
+      "family": "egg"
+    },
+    "milk": {
+      "family": "milk"
+    },
+    "cheese": {
+      "family": "cheese"
+    },
+    "butter": {
+      "family": "butter"
+    },
+    "mayo": {
+      "family": "mayonnaise"
+    },
+    "mayoonaise": {
+      "family": "mayonnaise"
+    },
+    "mayonnaise": {
+      "family": "mayonnaise"
+    },
+    "yogurt": {
+      "family": "yogurt"
+    },
+    "yoghurt": {
+      "family": "yogurt"
+    },
+    "honey": {
+      "family": "honey"
+    },
+    "oil": {
+      "family": "oil"
+    },
+    "oils": {
+      "family": "oil"
+    },
+    "mushroom": {
+      "family": "mushroom"
+    },
+    "mushrooms": {
+      "family": "mushroom"
+    },
+    "bread": {
+      "family": "bread"
+    },
+    "breadcrumbs": {
+      "family": "breadcrumb"
+    },
+    "jam": {
+      "family": "jam"
+    },
+    "(jam)": {
+      "family": "jam"
+    },
+    "(fruit)": {
+      "family": "fruit_a"
+    },
+    "(veggie)": {
+      "family": "vegetable_a"
+    },
+    "(veggies)": {
+      "family": "vegetable_c"
+    },
+    "(wild herb)": {
+      "family": "herb"
+    },
+    "(fish)": {
+      "family": "fish_e"
+    },
+    "fish": {
+      "family": "fish_c"
+    },
+    "1 additional crop": {
+      "family": "vegetable_a"
+    },
+    "herbs": {
+      "family": "herb"
+    },
+    "wild herb": {
+      "family": "herb"
+    },
+    "egg+": {
+      "item": "egg_plus"
+    },
+    "egg +": {
+      "item": "egg_plus"
+    },
+    "silkie egg": {
+      "item": "silkie_egg"
+    },
+    "silkie egg+": {
+      "item": "silkie_egg_plus"
+    },
+    "milk+": {
+      "item": "milk_plus"
+    },
+    "buffalo milk": {
+      "item": "buffalo_milk"
+    },
+    "buffalo milk+": {
+      "item": "buffalo_milk_plus"
+    },
+    "cheese+": {
+      "item": "cheese_plus"
+    },
+    "butter+": {
+      "item": "butter_plus"
+    },
+    "mayonnaise+": {
+      "item": "mayonnaise_plus"
+    },
+    "yogurt+": {
+      "item": "yogurt_plus"
+    },
+    "herb butter": {
+      "item": "herb_butter"
+    },
+    "olive oil": {
+      "item": "olive_oil"
+    },
+    "royal honey": {
+      "item": "royal_honey"
+    },
+    "wheat flour": {
+      "item": "wheat_flour"
+    },
+    "rice flour": {
+      "item": "rice_flour"
+    },
+    "wheat or rice flour": {
+      "family": "flour"
+    },
+    "wheat/rice flour": {
+      "family": "flour"
+    },
+    "(wheat or rice flour)": {
+      "family": "flour"
+    },
+    "bread or white bread": {
+      "family": "bread_toast"
+    },
+    "mint or chamomile or lavender": {
+      "family": "herb"
+    },
+    "lavendar": {
+      "item": "lavender"
+    },
+    "lavender": {
+      "item": "lavender"
+    },
+    "caulflower": {
+      "item": "cauliflower"
+    },
+    "cauliflower": {
+      "item": "cauliflower"
+    },
+    "onon": {
+      "item": "onion"
+    },
+    "refuned rice flour": {
+      "item": "refined_rice_flour"
+    },
+    "castellla": {
+      "item": "castella"
+    },
+    "shiitake": {
+      "item": "shiitake"
+    },
+    "shimeji": {
+      "item": "shimeji"
+    },
+    "matsutake": {
+      "item": "matsutake"
+    },
+    "morel": {
+      "item": "morel"
+    },
+    "porcini": {
+      "item": "porcini"
+    },
+    "soybeans": {
+      "item": "soybean"
+    },
+    "red grapes": {
+      "item": "red_grape"
+    },
+    "green grapes": {
+      "item": "green_grape"
+    },
+    "baguettes": {
+      "item": "baguette"
+    },
+    "baguette": {
+      "item": "baguette"
+    },
+    "common mush": {
+      "item": "common_mushroom"
+    },
+    "common mushroom": {
+      "item": "common_mushroom"
+    },
+    "monarch mushroom": {
+      "item": "monarch_mushroom"
+    },
+    "three-forked carrot": {
+      "item": "three_forked_carrot"
+    },
+    "jewel pineapple": {
+      "item": "jewel_pineapple"
+    },
+    "heart lemon": {
+      "item": "heart_lemon"
+    },
+    "heart watermelon": {
+      "item": "heart_watermelon"
+    },
+    "star potato": {
+      "item": "star_potato"
+    },
+    "giant tomato": {
+      "item": "giant_tomato"
+    },
+    "curled chili pepper": {
+      "item": "curled_chili_pepper"
+    },
+    "green onion": {
+      "item": "green_onion"
+    },
+    "napa cabbage": {
+      "item": "napa_cabbage"
+    },
+    "bok choy": {
+      "item": "bok_choy"
+    },
+    "fried tofu": {
+      "item": "fried_tofu"
+    },
+    "fish cake": {
+      "item": "fish_cake"
+    },
+    "cooked rice": {
+      "item": "cooked_rice"
+    },
+    "hot coffee": {
+      "item": "hot_coffee"
+    },
+    "coffee pack": {
+      "item": "coffee_pack"
+    },
+    "black tea tin": {
+      "item": "black_tea_tin"
+    },
+    "black tea": {
+      "item": "black_tea"
+    },
+    "summer blend tea can": {
+      "item": "summer_blend_tea_can"
+    },
+    "bottled chestnuts": {
+      "item": "bottled_chestnuts"
+    },
+    "bottled walnuts": {
+      "item": "bottled_walnuts"
+    },
+    "refined rice flour": {
+      "item": "refined_rice_flour"
+    },
+    "buckwheat flour": {
+      "item": "buckwheat_flour"
+    },
+    "soybean flour": {
+      "item": "soybean_flour"
+    },
+    "herb pasta": {
+      "item": "herb_pasta"
+    },
+    "penne pasta": {
+      "item": "penne_pasta"
+    },
+    "sashimi": {
+      "item": "sashimi"
+    },
+    "tempura": {
+      "item": "tempura"
+    },
+    "omelet": {
+      "item": "omelet"
+    },
+    "onigiri": {
+      "item": "onigiri"
+    },
+    "mixed salad": {
+      "item": "mixed_salad"
+    },
+    "chocolate": {
+      "item": "chocolate"
+    },
+    "soy milk": {
+      "item": "soy_milk"
+    },
+    "soy sauce": {
+      "item": "soy_sauce"
+    },
+    "curry powder": {
+      "item": "curry_powder"
+    },
+    "curry rice": {
+      "item": "curry_rice"
+    },
+    "supreme curry": {
+      "item": "supreme_curry"
+    },
+    "mochi": {
+      "item": "mochi"
+    },
+    "urchin": {
+      "item": "urchin"
+    },
+    "seaweed": {
+      "item": "seaweed"
+    },
+    "miso": {
+      "item": "miso"
+    },
+    "spice": {
+      "item": "spice"
+    },
+    "vinegar": {
+      "item": "vinegar"
+    },
+    "salt": {
+      "item": "salt"
+    },
+    "pepper": {
+      "item": "pepper"
+    },
+    "sugar": {
+      "item": "sugar"
+    },
+    "walnut": {
+      "item": "walnut"
+    },
+    "chestnut": {
+      "item": "chestnut"
+    },
+    "cacao bean": {
+      "item": "cacao_bean"
+    },
+    "ice cream": {
+      "item": "ice_cream"
+    },
+    "cookies": {
+      "item": "cookies"
+    },
+    "summer tea leaves": {
+      "item": "summer_tea_leaves"
+    },
+    "pasta": {
+      "item": "pasta"
+    },
+    "rice": {
+      "item": "rice"
+    },
+    "tofu": {
+      "item": "tofu"
+    },
+    "salmon": {
+      "item": "salmon"
+    },
+    "(asparagus, carrot, potato, cabbage, cauliflower, or turnip)": {
+      "family": "vegetable_b"
+    },
+    "(tofu, green onion, fried tofu, potato, or shimeji)": {
+      "family": "tofu_miso"
+    },
+    "(eel or marbled eel)": {
+      "family": "eel"
+    },
+    "(melon, strawberry, or tree fruit)": {
+      "family": "fruit_a"
+    },
+    "(shiitake, pumpkin, eggplant, etc.)": {
+      "family": "vegetable_e"
+    },
+    "(root veggie)": {
+      "family": "vegetable_d"
+    },
+    "(assorted veggies)": {
+      "family": "vegetable_c"
+    },
+    "(veggies or common mush)": {
+      "family": "vegetable_c"
+    },
+    "vegetables (broccoli, carrot, etc.)": {
+      "family": "vegetable_c"
+    },
+    "(sweetfish, yellow perch, etc.)": {
+      "family": "fish_d"
+    },
+    "fish (sweetfish, yellow perch, etc.)": {
+      "family": "fish_d"
+    },
+    "fish (black bass, grayling, etc.)": {
+      "family": "fish_e"
+    },
+    "fish (char, masu trout, etc.)": {
+      "family": "fish_a"
+    },
+    "(black bass, barbel steel, etc.)": {
+      "family": "fish_e"
+    },
+    "(black bass, bighead carp, etc.)": {
+      "family": "fish_e"
+    },
+    "(bluegill, killifish, etc.)": {
+      "family": "fish_b"
+    },
+    "(dark chub, dace, sulipin, etc.)": {
+      "family": "fish_c"
+    },
+    "2 herbs (chamomile, lavender, or mint)": {
+      "family": "herb",
+      "quantity": 2
+    },
+    "egg plus": {
+      "item": "egg_plus"
+    },
+    "silkie egg plus": {
+      "item": "silkie_egg_plus"
+    },
+    "milk plus": {
+      "item": "milk_plus"
+    },
+    "buffalo milk plus": {
+      "item": "buffalo_milk_plus"
+    },
+    "cheese plus": {
+      "item": "cheese_plus"
+    },
+    "herb cheese": {
+      "item": "herb_cheese"
+    },
+    "butter plus": {
+      "item": "butter_plus"
+    },
+    "mayonnaise plus": {
+      "item": "mayonnaise_plus"
+    },
+    "herb mayonnaise": {
+      "item": "herb_mayonnaise"
+    },
+    "yogurt plus": {
+      "item": "yogurt_plus"
+    },
+    "invigorating honey": {
+      "item": "invigorating_honey"
+    },
+    "mellow honey": {
+      "item": "mellow_honey"
+    },
+    "nut oil": {
+      "item": "nut_oil"
+    },
+    "herb oil": {
+      "item": "herb_oil"
+    },
+    "grape oil": {
+      "item": "grape_oil"
+    },
+    "mint": {
+      "item": "mint"
+    },
+    "chamomile": {
+      "item": "chamomile"
+    },
+    "white bread": {
+      "item": "white_bread"
+    },
+    "focaccia": {
+      "item": "focaccia"
+    },
+    "white breadcrumbs": {
+      "item": "white_breadcrumbs"
+    },
+    "apple jam": {
+      "item": "apple_jam"
+    },
+    "strawberry jam": {
+      "item": "strawberry_jam"
+    },
+    "grape jam": {
+      "item": "grape_jam"
+    },
+    "blueberry jam": {
+      "item": "blueberry_jam"
+    },
+    "cucumber": {
+      "item": "cucumber"
+    },
+    "onion": {
+      "item": "onion"
+    },
+    "asparagus": {
+      "item": "asparagus"
+    },
+    "tomato": {
+      "item": "tomato"
+    },
+    "red bell pepper": {
+      "item": "red_bell_pepper"
+    },
+    "green bell pepper": {
+      "item": "green_bell_pepper"
+    },
+    "carrot": {
+      "item": "carrot"
+    },
+    "turnip": {
+      "item": "turnip"
+    },
+    "sweet potato": {
+      "item": "sweet_potato"
+    },
+    "pumpkin": {
+      "item": "pumpkin"
+    },
+    "eggplant": {
+      "item": "eggplant"
+    },
+    "potato": {
+      "item": "potato"
+    },
+    "cabbage": {
+      "item": "cabbage"
+    },
+    "broccoli": {
+      "item": "broccoli"
+    },
+    "spinach": {
+      "item": "spinach"
+    },
+    "garlic": {
+      "item": "garlic"
+    },
+    "chili pepper": {
+      "item": "chili_pepper"
+    },
+    "daikon radish": {
+      "item": "daikon_radish"
+    },
+    "radish": {
+      "item": "radish"
+    },
+    "burdock": {
+      "item": "burdock"
+    },
+    "corn": {
+      "item": "corn"
+    },
+    "avocado": {
+      "item": "avocado"
+    },
+    "lemon": {
+      "item": "lemon"
+    },
+    "apple": {
+      "item": "apple"
+    },
+    "cherry": {
+      "item": "cherry"
+    },
+    "blueberry": {
+      "item": "blueberry"
+    },
+    "green grape": {
+      "item": "green_grape"
+    },
+    "red grape": {
+      "item": "red_grape"
+    },
+    "strawberry": {
+      "item": "strawberry"
+    },
+    "mango": {
+      "item": "mango"
+    },
+    "pineapple": {
+      "item": "pineapple"
+    },
+    "banana": {
+      "item": "banana"
+    },
+    "peach": {
+      "item": "peach"
+    },
+    "orange": {
+      "item": "orange"
+    },
+    "melon": {
+      "item": "melon"
+    },
+    "watermelon": {
+      "item": "watermelon"
+    },
+    "olive": {
+      "item": "olive"
+    },
+    "almond": {
+      "item": "almond"
+    },
+    "coffee bean": {
+      "item": "coffee_bean"
+    },
+    "ball eggplant": {
+      "item": "ball_eggplant"
+    },
+    "brawny green onion": {
+      "item": "brawny_green_onion"
+    },
+    "brawny onion": {
+      "item": "brawny_onion"
+    },
+    "calabash radish": {
+      "item": "calabash_radish"
+    },
+    "chicken mango": {
+      "item": "chicken_mango"
+    },
+    "dancing green bell pepper": {
+      "item": "dancing_green_bell_pepper"
+    },
+    "dancing red bell pepper": {
+      "item": "dancing_red_bell_pepper"
+    },
+    "finger green grapes": {
+      "item": "finger_green_grapes"
+    },
+    "finger red grapes": {
+      "item": "finger_red_grapes"
+    },
+    "flower blueberry": {
+      "item": "flower_blueberry"
+    },
+    "fork-root daikon": {
+      "item": "fork_root_daikon"
+    },
+    "fork root daikon": {
+      "item": "fork_root_daikon"
+    },
+    "giant avocado": {
+      "item": "giant_avocado"
+    },
+    "giant cabbage": {
+      "item": "giant_cabbage"
+    },
+    "giant pumpkin": {
+      "item": "giant_pumpkin"
+    },
+    "giant sweet potato": {
+      "item": "giant_sweet_potato"
+    },
+    "giant turnip": {
+      "item": "giant_turnip"
+    },
+    "golden apple": {
+      "item": "golden_apple"
+    },
+    "golden banana": {
+      "item": "golden_banana"
+    },
+    "golden bok choy": {
+      "item": "golden_bok_choy"
+    },
+    "golden cacao bean": {
+      "item": "golden_cacao_bean"
+    },
+    "golden coffee bean": {
+      "item": "golden_coffee_bean"
+    },
+    "golden garlic": {
+      "item": "golden_garlic"
+    },
+    "golden napa cabbage": {
+      "item": "golden_napa_cabbage"
+    },
+    "golden olive": {
+      "item": "golden_olive"
+    },
+    "golden peach": {
+      "item": "golden_peach"
+    },
+    "golden strawberry": {
+      "item": "golden_strawberry"
+    },
+    "heart cherry": {
+      "item": "heart_cherry"
+    },
+    "heart spinach": {
+      "item": "heart_spinach"
+    },
+    "jewel almond": {
+      "item": "jewel_almond"
+    },
+    "jewel melon": {
+      "item": "jewel_melon"
+    },
+    "lumpy orange": {
+      "item": "lumpy_orange"
+    },
+    "mosaic corn": {
+      "item": "mosaic_corn"
+    },
+    "pom-pom broccoli": {
+      "item": "pom_pom_broccoli"
+    },
+    "pom pom broccoli": {
+      "item": "pom_pom_broccoli"
+    },
+    "purple cauliflower": {
+      "item": "purple_cauliflower"
+    },
+    "three forked carrot": {
+      "item": "three_forked_carrot"
+    },
+    "twisted asparagus": {
+      "item": "twisted_asparagus"
+    },
+    "twisted burdock": {
+      "item": "twisted_burdock"
+    },
+    "wavy cucumber": {
+      "item": "wavy_cucumber"
+    },
+    "yellow perch": {
+      "item": "yellow_perch"
+    },
+    "snakehead": {
+      "item": "snakehead"
+    },
+    "masu trout": {
+      "item": "masu_trout"
+    },
+    "char": {
+      "item": "char"
+    },
+    "icefish": {
+      "item": "icefish"
+    },
+    "cherry salmon": {
+      "item": "cherry_salmon"
+    },
+    "bluegill": {
+      "item": "bluegill"
+    },
+    "willow shiner": {
+      "item": "willow_shiner"
+    },
+    "killifish": {
+      "item": "killifish"
+    },
+    "stone moroko": {
+      "item": "stone_moroko"
+    },
+    "pond smelt": {
+      "item": "pond_smelt"
+    },
+    "sweetfish": {
+      "item": "sweetfish"
+    },
+    "eel": {
+      "item": "eel"
+    },
+    "marbled eel": {
+      "item": "marbled_eel"
+    },
+    "goldfish": {
+      "item": "goldfish"
+    },
+    "crucian carp": {
+      "item": "crucian_carp"
+    },
+    "amur minnow": {
+      "item": "amur_minnow"
+    },
+    "dace": {
+      "item": "dace"
+    },
+    "pale chub": {
+      "item": "pale_chub"
+    },
+    "sculpin": {
+      "item": "sculpin"
+    },
+    "dark chub": {
+      "item": "dark_chub"
+    },
+    "bitterling": {
+      "item": "bitterling"
+    },
+    "tamoroko": {
+      "item": "tamoroko"
+    },
+    "rainbow trout": {
+      "item": "rainbow_trout"
+    },
+    "silver carp": {
+      "item": "silver_carp"
+    },
+    "basa": {
+      "item": "basa"
+    },
+    "nile perch": {
+      "item": "nile_perch"
+    },
+    "brown trout": {
+      "item": "brown_trout"
+    },
+    "grayling": {
+      "item": "grayling"
+    },
+    "bighead carp": {
+      "item": "bighead_carp"
+    },
+    "barbel steed": {
+      "item": "barbel_steed"
+    },
+    "three-lips carp": {
+      "item": "three_lips_carp"
+    },
+    "three lips carp": {
+      "item": "three_lips_carp"
+    },
+    "black bass": {
+      "item": "black_bass"
+    },
+    "mugitsuku": {
+      "item": "mugitsuku"
+    },
+    "soybean": {
+      "item": "soybean"
+    },
+    "castella": {
+      "item": "castella"
+    },
+    "golden blend tea tin": {
+      "item": "golden_blend_tea_tin"
+    },
+    "watermelon tea tin": {
+      "item": "watermelon_tea_tin"
+    },
+    "melon tea tin": {
+      "item": "melon_tea_tin"
+    },
+    "pineapple tea tin": {
+      "item": "pineapple_tea_tin"
+    },
+    "spring blend tea tin": {
+      "item": "spring_blend_tea_tin"
+    },
+    "strawberry tea tin": {
+      "item": "strawberry_tea_tin"
+    },
+    "sencha tea tin": {
+      "item": "sencha_tea_tin"
+    },
+    "pu'er tea tin": {
+      "item": "puer_tea_tin"
+    },
+    "puer tea tin": {
+      "item": "puer_tea_tin"
+    },
+    "oolong tea tin": {
+      "item": "oolong_tea_tin"
+    },
+    "matcha tea tin": {
+      "item": "matcha_tea_tin"
+    },
+    "mint tea tin": {
+      "item": "mint_tea_tin"
+    },
+    "chamomile tea tin": {
+      "item": "chamomile_tea_tin"
+    },
+    "lavender tea tin": {
+      "item": "lavender_tea_tin"
+    },
+    "green tea tin": {
+      "item": "green_tea_tin"
+    },
+    "autumn blend tea tin": {
+      "item": "autumn_blend_tea_tin"
+    },
+    "banana tea tin": {
+      "item": "banana_tea_tin"
+    },
+    "mango tea tin": {
+      "item": "mango_tea_tin"
+    },
+    "green grape tea tin": {
+      "item": "green_grape_tea_tin"
+    },
+    "red grape tea tin": {
+      "item": "red_grape_tea_tin"
+    },
+    "apple tea tin": {
+      "item": "apple_tea_tin"
+    },
+    "cherry tea tin": {
+      "item": "cherry_tea_tin"
+    },
+    "peach tea tin": {
+      "item": "peach_tea_tin"
+    },
+    "orange tea tin": {
+      "item": "orange_tea_tin"
+    },
+    "lemon tea tin": {
+      "item": "lemon_tea_tin"
+    },
+    "blueberry tea tin": {
+      "item": "blueberry_tea_tin"
+    },
+    "olive tea tin": {
+      "item": "olive_tea_tin"
+    },
+    "banana juice": {
+      "item": "banana_juice"
+    },
+    "peach juice": {
+      "item": "peach_juice"
+    },
+    "lemon juice": {
+      "item": "lemon_juice"
+    },
+    "strawberry juice": {
+      "item": "strawberry_juice"
+    },
+    "orange juice": {
+      "item": "orange_juice"
+    },
+    "cherry juice": {
+      "item": "cherry_juice"
+    },
+    "grape juice": {
+      "item": "grape_juice"
+    },
+    "blueberry juice": {
+      "item": "blueberry_juice"
+    },
+    "apple juice": {
+      "item": "apple_juice"
+    },
+    "spring juice": {
+      "item": "spring_juice"
+    },
+    "summer juice": {
+      "item": "summer_juice"
+    },
+    "autumn juice": {
+      "item": "autumn_juice"
+    }
+  },
+  "recipe_overrides": {
+    "sashimi": {
+      "fish": {
+        "family": "fish_c"
+      }
+    },
+    "fish_cake": {
+      "fish": {
+        "family": "fish_c"
+      }
+    },
+    "shumai_dumplings": {
+      "fish": {
+        "family": "fish_b"
+      }
+    },
+    "fish_and_chips": {
+      "fish": {
+        "family": "fish_a"
+      }
+    },
+    "paella": {
+      "(fish)": {
+        "family": "fish_e"
+      },
+      "fish": {
+        "family": "fish_e"
+      }
+    },
+    "warm_milk": {
+      "milk": {
+        "item": "milk"
+      }
+    },
+    "honey_cake": {
+      "honey": {
+        "item": "honey"
+      }
+    },
+    "cheese_bun": {
+      "buffalo milk": {
+        "item": "buffalo_milk"
+      }
+    },
+    "herb_bread": {
+      "herb butter": {
+        "item": "herb_butter"
+      }
+    },
+    "royal_milk_tea": {
+      "milk+": {
+        "item": "milk_plus"
+      }
+    },
+    "happy_fruit_platter": {
+      "(fruit)": {
+        "family": "fruit_a"
+      }
+    },
+    "chocolate_fondue": {
+      "(fruit)": {
+        "family": "fruit_b"
+      }
+    },
+    "mixed_salad": {
+      "1 additional crop": {
+        "family": "vegetable_a"
+      }
+    },
+    "vegetable_curry": {
+      "(veggies)": {
+        "family": "vegetable_a"
+      }
+    },
+    "tomato_fondue": {
+      "(veggies)": {
+        "family": "vegetable_c"
+      }
+    },
+    "toast": {
+      "bread or white bread": {
+        "family": "bread_toast"
+      }
+    },
+    "french_toast": {
+      "bread or white bread": {
+        "family": "bread_toast"
+      }
+    }
+  },
+  "multi_slot_aliases": {
+    "happy_fruit_platter": [
+      {
+        "raw_contains": "(fruit)",
+        "family": "fruit_a"
+      },
+      {
+        "raw_contains": "(fruit)",
+        "family": "fruit_b"
+      }
+    ]
+  }
+}

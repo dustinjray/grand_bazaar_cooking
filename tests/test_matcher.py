@@ -8,7 +8,7 @@ from pathlib import Path
 
 from app.catalog import get_catalog
 from app.db import connect, get_appliances, get_inventory, set_appliance, set_count, apply_inventory
-from app.main import sort_recipe_rows
+from app.main import recipe_uses_items, sort_recipe_rows
 from app.matcher import CookError, MissingSlot, RecipeStatus, evaluate, plan_cook
 from models import IngredientSlot, Recipe
 
@@ -275,6 +275,24 @@ class RecipeSortTests(unittest.TestCase):
         rows = [self._row("Beta", 1, 0), self._row("Alpha", 9, 0)]
         names = [row["recipe"].name for row in sort_recipe_rows(rows, "nope")]
         self.assertEqual(names, ["Alpha", "Beta"])
+
+
+class UseSoonTests(unittest.TestCase):
+    def test_pumpkin_soup_matches_pumpkin_variants_not_mint(self) -> None:
+        soup = get_catalog().recipes["pumpkin_soup"]
+        self.assertTrue(recipe_uses_items(soup, {"pumpkin"}))
+        self.assertTrue(recipe_uses_items(soup, {"giant_pumpkin"}))
+        self.assertFalse(recipe_uses_items(soup, {"mint"}))
+
+    def test_herb_salad_matches_mint_even_with_extra_picks(self) -> None:
+        salad = get_catalog().recipes["herb_salad"]
+        self.assertTrue(recipe_uses_items(salad, {"mint"}))
+        self.assertTrue(recipe_uses_items(salad, {"mint", "pumpkin"}))
+        self.assertFalse(recipe_uses_items(salad, {"pumpkin"}))
+
+    def test_empty_selection_does_not_match(self) -> None:
+        soup = get_catalog().recipes["pumpkin_soup"]
+        self.assertFalse(recipe_uses_items(soup, set()))
 
 
 if __name__ == "__main__":

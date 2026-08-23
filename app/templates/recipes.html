@@ -16,6 +16,7 @@
         {% endfor %}
       </select>
     </label>
+    {% if not expire_active %}
     <label>
       <span>Sort</span>
       <select name="sort">
@@ -24,13 +25,38 @@
         {% endfor %}
       </select>
     </label>
+    {% endif %}
     <label class="check">
       <input type="checkbox" name="cookable" value="true" {% if cookable %}checked{% endif %}>
       Cookable only
     </label>
     <button type="submit">Filter</button>
+
+    <fieldset class="use-soon">
+      <legend>Use soon</legend>
+      <p>Tick items that are about to spoil. Nothing is saved; this only filters this page. Recipes that can use at least one of them are listed, fewest missing first.</p>
+      {% if owned_items %}
+      <label class="use-soon-search">
+        <span>Find in inventory</span>
+        <input type="search" id="expire-filter" placeholder="Filter owned items" autocomplete="off">
+      </label>
+      <div class="expire-grid">
+        {% for item in owned_items %}
+        <label class="expire-item" data-name="{{ item.name|lower }}">
+          <input type="checkbox" name="expire" value="{{ item.id }}" {% if item.id in expire_ids %}checked{% endif %}>
+          <span>{{ item.name }} <span class="muted">×{{ item.count }}</span></span>
+        </label>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="muted">Add counts on Inventory first, then tick what you need to cook soon.</p>
+      {% endif %}
+    </fieldset>
   </form>
-  <p class="meta">{{ rows|length }} shown · {{ cookable_count }} cookable now</p>
+  <p class="meta">
+    {{ rows|length }} shown · {{ cookable_count }} cookable now
+    {% if expire_active %} · using {{ expire_ids|length }} soon-to-spoil item{{ 's' if expire_ids|length != 1 else '' }}, sorted by fewest missing{% endif %}
+  </p>
 </section>
 
 {% if rows %}
@@ -95,4 +121,5 @@
 {% endblock %}
 {% block scripts %}
 <script src="/static/cook.js"></script>
+<script src="/static/recipes.js"></script>
 {% endblock %}

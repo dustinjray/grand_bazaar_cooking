@@ -13,6 +13,7 @@ from pydantic import BaseModel, Field
 from app import db
 from app.catalog import APPLIANCES, CATEGORIES, CATEGORY_NAMES, get_catalog
 from app.matcher import CookError, RecipeStatus, evaluate, plan_cook
+from models import Recipe
 
 APP_DIR = Path(__file__).resolve().parent
 
@@ -54,6 +55,12 @@ def missing_ingredient_count(status: RecipeStatus) -> int:
     return sum(slot.quantity for slot in status.missing_slots)
 
 
+def recipe_uses_items(recipe: Recipe, item_ids: set[str]) -> bool:
+    if not item_ids:
+        return False
+    return any(item_ids.intersection(slot.accepted) for slot in recipe.ingredients)
+
+
 def sort_recipe_rows(rows: list[dict], sort: str) -> list[dict]:
     mode = sort if sort in SORT_MODES else "name"
     if mode == "price":
@@ -79,13 +86,17 @@ def _view_recipes(
     category: str,
     cookable_only: bool,
     sort: str = "name",
+    expire_ids: set[str] | None = None,
 ):
     q_norm = q.strip().lower()
+    wanted = expire_ids or set()
     rows = []
     for recipe in catalog.recipes.values():
         if category and recipe.category != category:
             continue
         if q_norm and q_norm not in recipe.name.lower():
+            continue
+        if wanted and not recipe_uses_items(recipe, wanted):
             continue
         status = evaluate(recipe, inventory, appliances)
         if cookable_only and not status.cookable:
@@ -108,6 +119,7 @@ def recipes_page(
     category: str = "",
     cookable: bool = Query(False),
     sort: str = "name",
+    expire: list[str] = Query(default=[]),
 ):
     catalog = get_catalog()
     conn = _conn()
@@ -116,9 +128,20 @@ def recipes_page(
         appliances = db.get_appliances(conn)
     finally:
         conn.close()
-    if sort not in SORT_MODES:
+    owned = [
+        {"id": item.id, "name": item.name, "count": inventory[item.id]}
+        for item in catalog.items.values()
+        if inventory.get(item.id, 0) > 0
+    ]
+    owned.sort(key=lambda row: row["name"].lower())
+    expire_ids = {iid for iid in expire if inventory.get(iid, 0) > 0}
+    if expire_ids:
+        sort = "missing"
+    elif sort not in SORT_MODES:
         sort = "name"
-    rows = _view_recipes(catalog, inventory, appliances, q, category, cookable, sort)
+    rows = _view_recipes(
+        catalog, inventory, appliances, q, category, cookable, sort, expire_ids
+    )
     cookable_count = sum(
         1
         for recipe in catalog.recipes.values()
@@ -137,6 +160,9 @@ def recipes_page(
             "sort_options": SORT_LABELS,
             "categories": CATEGORIES,
             "cookable_count": cookable_count,
+            "owned_items": owned,
+            "expire_ids": expire_ids,
+            "expire_active": bool(expire_ids),
         },
     )
 

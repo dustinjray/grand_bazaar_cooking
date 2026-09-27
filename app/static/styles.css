@@ -139,6 +139,26 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   text-underline-offset: 0.18em;
 }
 .slot-btn:hover { background: none; color: var(--accent); }
+.slots li { position: relative; }
+.info-tip {
+  display: none;
+  font-size: 0.8rem;
+  color: var(--ink);
+  background: #f0dcc0;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  padding: 0.3rem 0.55rem;
+}
+.slots .info-tip {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 4;
+  width: max-content;
+  max-width: 18rem;
+  box-shadow: var(--shadow);
+}
+.slot-btn:hover + .info-tip { display: block; }
 .adapt, .ready { margin: 0; font-size: 0.85rem; }
 .ready { color: var(--ready); font-weight: 600; }
 .missing { color: var(--accent); }
@@ -224,16 +244,31 @@ dialog::backdrop { background: rgba(42, 33, 24, 0.35); }
   overflow: auto;
 }
 .slot-fillers li {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  align-items: baseline;
   padding: 0.35rem 0.15rem;
   border-bottom: 1px solid var(--line);
 }
 .slot-fillers li:last-child { border-bottom: 0; }
 .slot-fillers .owned { color: var(--ink); }
 .slot-fillers .unowned { color: var(--muted); }
+.filler-toggle {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+  width: 100%;
+  padding: 0;
+  background: none;
+  color: inherit;
+  border-radius: 0;
+  text-align: left;
+}
+.filler-toggle:hover { background: none; color: var(--accent); }
+.filler-info {
+  margin: 0.25rem 0 0;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  color: var(--ink);
+}
 .slot-block {
   border: 1px solid var(--line);
   border-radius: 0.7rem;

@@ -12,6 +12,7 @@ from pydantic import BaseModel, Field
 
 from app import db
 from app.catalog import APPLIANCES, CATEGORIES, CATEGORY_NAMES, get_catalog
+from app.crops import crop_info_text, get_crop_info
 from app.matcher import CookError, RecipeStatus, evaluate, plan_cook
 from models import IngredientSlot, Recipe
 
@@ -62,11 +63,13 @@ def recipe_uses_items(recipe: Recipe, item_ids: set[str]) -> bool:
 
 
 def slot_fillers(catalog, inventory: dict[str, int], slot: IngredientSlot) -> list[dict]:
+    info = get_crop_info()
     return [
         {
             "id": item_id,
             "name": catalog.item_name(item_id),
             "have": int(inventory.get(item_id, 0)),
+            "info": crop_info_text(info, catalog.item_name(item_id)),
         }
         for item_id in slot.accepted
     ]
@@ -131,6 +134,9 @@ def _view_recipes(
                 "utensil_label": catalog.appliance_name(recipe.utensil),
                 "slot_fillers": [
                     slot_fillers(catalog, inventory, slot) for slot in recipe.ingredients
+                ],
+                "slot_info": [
+                    crop_info_text(get_crop_info(), slot.display) for slot in recipe.ingredients
                 ],
             }
         )

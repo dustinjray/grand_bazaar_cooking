@@ -1,0 +1,178 @@
+[
+  {
+    "id": "turnip",
+    "name": "Turnip",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": "Giant Turnip",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "asparagus",
+    "name": "Asparagus",
+    "season": "Spring",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Twisted Asparagus",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "cabbage",
+    "name": "Cabbage",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Giant Cabbage",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "potato",
+    "name": "Potato",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Star Potato",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Brawny Onion",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "radish",
+    "name": "Radish",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Calabash Radish",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "daikon_radish",
+    "name": "Daikon Radish",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Fork-Root Daikon",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "strawberry",
+    "name": "Strawberry",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": "Golden Strawberry",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "season": "Spring",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Golden Garlic",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "broccoli",
+    "name": "Broccoli",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Pom-pom Broccoli",
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "soybean",
+    "name": "Soybean",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "spring_tea_leaves",
+    "name": "Spring Tea Leaves",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "baby_blue_flower",
+    "name": "Baby Blue Flower",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "pansy",
+    "name": "Pansy",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "buttercup",
+    "name": "Buttercup",
+    "season": "Spring",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  }
+]

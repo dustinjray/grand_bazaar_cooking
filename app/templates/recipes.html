@@ -95,6 +95,7 @@
         >
           {{ slot.quantity }}× {{ slot.display }}
         </button>
+        <span class="info-tip" role="tooltip">{{ row.slot_info[loop.index0] }}</span>
       </li>
       {% endfor %}
     </ul>

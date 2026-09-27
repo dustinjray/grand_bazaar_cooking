@@ -44,19 +44,36 @@ function openSlotDialog(btn) {
     empty.textContent = "No known items fill this slot.";
     slotList.appendChild(empty);
   } else {
-    items.forEach((item) => {
+    items.forEach((item, index) => {
       const li = document.createElement("li");
       const have = Number(item.have) || 0;
       li.className = have > 0 ? "owned" : "unowned";
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "filler-toggle";
+      toggle.setAttribute("aria-expanded", "false");
       const name = document.createElement("span");
+      name.className = "filler-name";
       name.textContent = item.name || item.id || "";
-      li.appendChild(name);
+      toggle.appendChild(name);
       if (have > 0) {
         const count = document.createElement("span");
         count.className = "muted";
         count.textContent = `×${have}`;
-        li.appendChild(count);
+        toggle.appendChild(count);
       }
+      const info = document.createElement("p");
+      info.className = "filler-info";
+      info.id = `slot-filler-info-${index}`;
+      info.hidden = true;
+      info.textContent = item.info || "";
+      toggle.setAttribute("aria-controls", info.id);
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(expanded));
+        info.hidden = !expanded;
+      });
+      li.append(toggle, info);
       slotList.appendChild(li);
     });
   }

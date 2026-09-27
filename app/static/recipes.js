@@ -66,3 +66,30 @@ function openSlotDialog(btn) {
 document.querySelectorAll(".slot-btn").forEach((btn) => {
   btn.addEventListener("click", () => openSlotDialog(btn));
 });
+
+const recipeList = document.querySelector(".recipe-list");
+const ownedOnly = recipeList?.dataset.ownedOnly === "true";
+
+function showOwnedEmpty() {
+  if (!recipeList || recipeList.querySelector(".recipe-card")) return;
+  const empty = document.createElement("p");
+  empty.className = "empty";
+  empty.textContent =
+    "No owned recipes yet. Uncheck Owned only to browse the catalog and tick recipes you've found.";
+  recipeList.replaceWith(empty);
+}
+
+document.querySelectorAll("[data-recipe-owned]").forEach((box) => {
+  box.addEventListener("change", async () => {
+    try {
+      await postJson(`/api/recipes/${box.dataset.recipeOwned}/owned`, { owned: box.checked });
+      if (ownedOnly && !box.checked) {
+        box.closest(".recipe-card")?.remove();
+        showOwnedEmpty();
+      }
+    } catch (err) {
+      box.checked = !box.checked;
+      showFlash(err.message, true);
+    }
+  });
+});

@@ -8,8 +8,17 @@ import unittest
 from pathlib import Path
 
 from app.catalog import DATA_DIR, get_catalog
-from app.db import connect, get_appliances, get_inventory, set_appliance, set_count, apply_inventory
-from app.main import recipe_uses_items, slot_fillers, sort_recipe_rows
+from app.db import (
+    apply_inventory,
+    connect,
+    get_appliances,
+    get_inventory,
+    get_owned_recipes,
+    set_appliance,
+    set_count,
+    set_recipe_owned,
+)
+from app.main import owned_only_from_query, recipe_uses_items, slot_fillers, sort_recipe_rows
 from app.matcher import CookError, MissingSlot, RecipeStatus, evaluate, plan_cook
 from models import IngredientSlot, Recipe
 
@@ -232,6 +241,23 @@ class StoreTests(unittest.TestCase):
             self.assertEqual(get_inventory(conn)["lavender"], 1)
             conn.close()
 
+    def test_owned_recipes_persist_and_clear(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "inventory.db"
+            conn = connect(path)
+            self.assertEqual(get_owned_recipes(conn), set())
+            self.assertTrue(set_recipe_owned(conn, "herb_salad", True))
+            conn.close()
+
+            conn = connect(path)
+            self.assertEqual(get_owned_recipes(conn), {"herb_salad"})
+            self.assertFalse(set_recipe_owned(conn, "herb_salad", False))
+            conn.close()
+
+            conn = connect(path)
+            self.assertEqual(get_owned_recipes(conn), set())
+            conn.close()
+
 
 class RecipeSortTests(unittest.TestCase):
     def _row(self, name: str, price: int | None, missing: int) -> dict:
@@ -294,6 +320,15 @@ class UseSoonTests(unittest.TestCase):
     def test_empty_selection_does_not_match(self) -> None:
         soup = get_catalog().recipes["pumpkin_soup"]
         self.assertFalse(recipe_uses_items(soup, set()))
+
+
+class OwnedOnlyQueryTests(unittest.TestCase):
+    def test_default_and_form_pairs(self) -> None:
+        self.assertTrue(owned_only_from_query([]))
+        self.assertTrue(owned_only_from_query(["true"]))
+        self.assertFalse(owned_only_from_query(["false"]))
+        self.assertTrue(owned_only_from_query(["false", "true"]))
+        self.assertFalse(owned_only_from_query(["true", "false"]))
 
 
 class SlotFillerTests(unittest.TestCase):

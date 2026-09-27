@@ -1,4 +1,4 @@
-"""SQLite persistence for ingredient counts and owned appliances."""
+"""SQLite persistence for ingredient counts, appliances, and found recipes."""
 
 from __future__ import annotations
 
@@ -28,6 +28,10 @@ def init_schema(conn: sqlite3.Connection) -> None:
             count INTEGER NOT NULL CHECK (count >= 0)
         );
         CREATE TABLE IF NOT EXISTS appliances (
+            id TEXT PRIMARY KEY,
+            owned INTEGER NOT NULL CHECK (owned IN (0, 1))
+        );
+        CREATE TABLE IF NOT EXISTS recipes (
             id TEXT PRIMARY KEY,
             owned INTEGER NOT NULL CHECK (owned IN (0, 1))
         );
@@ -84,6 +88,24 @@ def set_appliance(conn: sqlite3.Connection, appliance_id: str, owned: bool) -> b
         ON CONFLICT(id) DO UPDATE SET owned = excluded.owned
         """,
         (appliance_id, flag),
+    )
+    conn.commit()
+    return bool(flag)
+
+
+def get_owned_recipes(conn: sqlite3.Connection) -> set[str]:
+    rows = conn.execute("SELECT id FROM recipes WHERE owned = 1")
+    return {row["id"] for row in rows}
+
+
+def set_recipe_owned(conn: sqlite3.Connection, recipe_id: str, owned: bool) -> bool:
+    flag = 1 if owned else 0
+    conn.execute(
+        """
+        INSERT INTO recipes (id, owned) VALUES (?, ?)
+        ON CONFLICT(id) DO UPDATE SET owned = excluded.owned
+        """,
+        (recipe_id, flag),
     )
     conn.commit()
     return bool(flag)

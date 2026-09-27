@@ -30,6 +30,11 @@
       <input type="checkbox" name="cookable" value="true" {% if cookable %}checked{% endif %}>
       Cookable only
     </label>
+    <input type="hidden" name="owned" value="false">
+    <label class="check">
+      <input type="checkbox" name="owned" value="true" {% if owned_only %}checked{% endif %}>
+      Owned only
+    </label>
     <button type="submit">Filter</button>
 
     <fieldset class="use-soon">
@@ -60,7 +65,7 @@
 </section>
 
 {% if rows %}
-<div class="recipe-list">
+<div class="recipe-list" data-owned-only="{{ 'true' if owned_only else 'false' }}">
   {% for row in rows %}
   {% set recipe = row.recipe %}
   {% set status = row.status %}
@@ -69,6 +74,10 @@
       <h2>{{ recipe.name }}</h2>
       <span class="pill">{{ row.category_label }}</span>
     </header>
+    <label class="found-check">
+      <input type="checkbox" data-recipe-owned="{{ recipe.id }}" {% if recipe.id in owned_ids %}checked{% endif %}>
+      Found
+    </label>
     <p class="facts">
       {% if recipe.sale_price is not none %}<span>{{ recipe.sale_price }}G</span>{% endif %}
       {% if row.utensil_label %}<span>{{ row.utensil_label }}</span>{% endif %}
@@ -109,7 +118,11 @@
   {% endfor %}
 </div>
 {% else %}
+{% if owned_only and not owned_ids %}
+<p class="empty">No owned recipes yet. Uncheck Owned only to browse the catalog and tick recipes you've found.</p>
+{% else %}
 <p class="empty">No recipes match those filters.</p>
+{% endif %}
 {% endif %}
 
 <dialog id="slot-dialog">

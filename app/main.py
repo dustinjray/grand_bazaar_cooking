@@ -72,6 +72,12 @@ def slot_fillers(catalog, inventory: dict[str, int], slot: IngredientSlot) -> li
     ]
 
 
+def owned_only_from_query(owned: list[str]) -> bool:
+    if not owned:
+        return True
+    return owned[-1].strip().lower() in {"1", "true", "on", "yes"}
+
+
 def sort_recipe_rows(rows: list[dict], sort: str) -> list[dict]:
     mode = sort if sort in SORT_MODES else "name"
     if mode == "price":
@@ -98,11 +104,16 @@ def _view_recipes(
     cookable_only: bool,
     sort: str = "name",
     expire_ids: set[str] | None = None,
+    owned_ids: set[str] | None = None,
+    owned_only: bool = False,
 ):
     q_norm = q.strip().lower()
     wanted = expire_ids or set()
+    found = owned_ids or set()
     rows = []
     for recipe in catalog.recipes.values():
+        if owned_only and recipe.id not in found:
+            continue
         if category and recipe.category != category:
             continue
         if q_norm and q_norm not in recipe.name.lower():
@@ -134,32 +145,45 @@ def recipes_page(
     cookable: bool = Query(False),
     sort: str = "name",
     expire: list[str] = Query(default=[]),
+    owned: list[str] = Query(default=["true"]),
 ):
     catalog = get_catalog()
     conn = _conn()
     try:
         inventory = db.get_inventory(conn)
         appliances = db.get_appliances(conn)
+        owned_ids = db.get_owned_recipes(conn)
     finally:
         conn.close()
-    owned = [
+    owned_items = [
         {"id": item.id, "name": item.name, "count": inventory[item.id]}
         for item in catalog.items.values()
         if inventory.get(item.id, 0) > 0
     ]
-    owned.sort(key=lambda row: row["name"].lower())
+    owned_items.sort(key=lambda row: row["name"].lower())
     expire_ids = {iid for iid in expire if inventory.get(iid, 0) > 0}
+    owned_only = owned_only_from_query(owned)
     if expire_ids:
         sort = "missing"
     elif sort not in SORT_MODES:
         sort = "name"
     rows = _view_recipes(
-        catalog, inventory, appliances, q, category, cookable, sort, expire_ids
+        catalog,
+        inventory,
+        appliances,
+        q,
+        category,
+        cookable,
+        sort,
+        expire_ids,
+        owned_ids,
+        owned_only,
     )
+    counted = catalog.recipes.values()
+    if owned_only:
+        counted = [recipe for recipe in counted if recipe.id in owned_ids]
     cookable_count = sum(
-        1
-        for recipe in catalog.recipes.values()
-        if evaluate(recipe, inventory, appliances).cookable
+        1 for recipe in counted if evaluate(recipe, inventory, appliances).cookable
     )
     return templates.TemplateResponse(
         request=request,
@@ -174,9 +198,11 @@ def recipes_page(
             "sort_options": SORT_LABELS,
             "categories": CATEGORIES,
             "cookable_count": cookable_count,
-            "owned_items": owned,
+            "owned_items": owned_items,
             "expire_ids": expire_ids,
             "expire_active": bool(expire_ids),
+            "owned_ids": owned_ids,
+            "owned_only": owned_only,
         },
     )
 
@@ -243,6 +269,19 @@ def api_set_appliance(appliance_id: str, body: OwnedBody):
     finally:
         conn.close()
     return {"id": appliance_id, "owned": owned}
+
+
+@app.post("/api/recipes/{recipe_id}/owned")
+def api_set_recipe_owned(recipe_id: str, body: OwnedBody):
+    catalog = get_catalog()
+    if recipe_id not in catalog.recipes:
+        raise HTTPException(status_code=404, detail="Unknown recipe")
+    conn = _conn()
+    try:
+        owned = db.set_recipe_owned(conn, recipe_id, body.owned)
+    finally:
+        conn.close()
+    return {"id": recipe_id, "owned": owned}
 
 
 @app.get("/api/recipes/{recipe_id}/cook")

@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 from app import db
 from app.catalog import APPLIANCES, CATEGORIES, CATEGORY_NAMES, get_catalog
 from app.matcher import CookError, RecipeStatus, evaluate, plan_cook
-from models import Recipe
+from models import IngredientSlot, Recipe
 
 APP_DIR = Path(__file__).resolve().parent
 
@@ -59,6 +59,17 @@ def recipe_uses_items(recipe: Recipe, item_ids: set[str]) -> bool:
     if not item_ids:
         return False
     return any(item_ids.intersection(slot.accepted) for slot in recipe.ingredients)
+
+
+def slot_fillers(catalog, inventory: dict[str, int], slot: IngredientSlot) -> list[dict]:
+    return [
+        {
+            "id": item_id,
+            "name": catalog.item_name(item_id),
+            "have": int(inventory.get(item_id, 0)),
+        }
+        for item_id in slot.accepted
+    ]
 
 
 def sort_recipe_rows(rows: list[dict], sort: str) -> list[dict]:
@@ -107,6 +118,9 @@ def _view_recipes(
                 "status": status,
                 "category_label": CATEGORY_NAMES.get(recipe.category, recipe.category),
                 "utensil_label": catalog.appliance_name(recipe.utensil),
+                "slot_fillers": [
+                    slot_fillers(catalog, inventory, slot) for slot in recipe.ingredients
+                ],
             }
         )
     return sort_recipe_rows(rows, sort)

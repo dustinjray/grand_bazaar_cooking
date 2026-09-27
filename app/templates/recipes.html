@@ -76,7 +76,17 @@
     </p>
     <ul class="slots">
       {% for slot in recipe.ingredients %}
-      <li>{{ slot.quantity }}× {{ slot.display }}</li>
+      <li>
+        <button
+          type="button"
+          class="slot-btn"
+          data-qty="{{ slot.quantity }}"
+          data-display="{{ slot.display }}"
+          data-items="{{ row.slot_fillers[loop.index0] | tojson | forceescape }}"
+        >
+          {{ slot.quantity }}× {{ slot.display }}
+        </button>
+      </li>
       {% endfor %}
     </ul>
     {% if recipe.adapt %}
@@ -101,6 +111,17 @@
 {% else %}
 <p class="empty">No recipes match those filters.</p>
 {% endif %}
+
+<dialog id="slot-dialog">
+  <form id="slot-dialog-form" method="dialog">
+    <h2 id="slot-dialog-title">Ingredient</h2>
+    <p id="slot-dialog-need" class="facts"></p>
+    <ul id="slot-dialog-list" class="slot-fillers"></ul>
+    <footer>
+      <button type="submit" id="slot-dialog-close" value="close">Close</button>
+    </footer>
+  </form>
+</dialog>
 
 <dialog id="cook-dialog">
   <form id="cook-form" method="dialog">

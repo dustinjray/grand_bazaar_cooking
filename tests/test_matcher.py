@@ -9,7 +9,7 @@ from pathlib import Path
 
 from app.catalog import DATA_DIR, get_catalog
 from app.db import connect, get_appliances, get_inventory, set_appliance, set_count, apply_inventory
-from app.main import recipe_uses_items, sort_recipe_rows
+from app.main import recipe_uses_items, slot_fillers, sort_recipe_rows
 from app.matcher import CookError, MissingSlot, RecipeStatus, evaluate, plan_cook
 from models import IngredientSlot, Recipe
 
@@ -294,6 +294,28 @@ class UseSoonTests(unittest.TestCase):
     def test_empty_selection_does_not_match(self) -> None:
         soup = get_catalog().recipes["pumpkin_soup"]
         self.assertFalse(recipe_uses_items(soup, set()))
+
+
+class SlotFillerTests(unittest.TestCase):
+    def test_vegetable_d_lists_root_veggies_and_counts(self) -> None:
+        catalog = get_catalog()
+        recipe = catalog.recipes["spicy_curry"]
+        veg = next(slot for slot in recipe.ingredients if slot.display == "Vegetable D")
+        fillers = slot_fillers(catalog, {"onion": 2, "carrot": 0}, veg)
+        by_id = {row["id"]: row for row in fillers}
+        self.assertEqual(
+            set(by_id),
+            {"onion", "carrot", "potato", "brawny_onion", "star_potato", "three_forked_carrot"},
+        )
+        self.assertEqual(by_id["onion"]["have"], 2)
+        self.assertEqual(by_id["onion"]["name"], catalog.item_name("onion"))
+        self.assertEqual(by_id["carrot"]["have"], 0)
+        self.assertEqual(by_id["potato"]["have"], 0)
+
+    def test_empty_accepted_returns_empty(self) -> None:
+        catalog = get_catalog()
+        slot = IngredientSlot(1, [], "Empty", "empty")
+        self.assertEqual(slot_fillers(catalog, {"onion": 3}, slot), [])
 
 
 LETTER_GROUP_DISPLAYS = {

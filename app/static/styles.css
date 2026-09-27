@@ -129,6 +129,16 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .facts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; font-size: 0.9rem; }
 .slots, .missing { margin: 0; padding-left: 1.1rem; }
+.slot-btn {
+  background: none;
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.18em;
+}
+.slot-btn:hover { background: none; color: var(--accent); }
 .adapt, .ready { margin: 0; font-size: 0.85rem; }
 .ready { color: var(--ready); font-weight: 600; }
 .missing { color: var(--accent); }
@@ -191,9 +201,30 @@ dialog {
   box-shadow: var(--shadow);
 }
 dialog::backdrop { background: rgba(42, 33, 24, 0.35); }
-#cook-form { display: grid; gap: 0.8rem; }
-#cook-form footer { display: flex; justify-content: end; gap: 0.5rem; }
-#cook-cancel { background: #ead7bb; color: var(--ink); }
+#cook-form, #slot-dialog-form { display: grid; gap: 0.8rem; }
+#cook-form footer, #slot-dialog-form footer { display: flex; justify-content: end; gap: 0.5rem; }
+#cook-cancel, #slot-dialog-close { background: #ead7bb; color: var(--ink); }
+#cook-cancel:hover, #slot-dialog-close:hover { background: #ddc6a4; }
+.slot-fillers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  max-height: 18rem;
+  overflow: auto;
+}
+.slot-fillers li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.35rem 0.15rem;
+  border-bottom: 1px solid var(--line);
+}
+.slot-fillers li:last-child { border-bottom: 0; }
+.slot-fillers .owned { color: var(--ink); }
+.slot-fillers .unowned { color: var(--muted); }
 .slot-block {
   border: 1px solid var(--line);
   border-radius: 0.7rem;

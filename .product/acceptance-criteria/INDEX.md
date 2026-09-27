@@ -32,3 +32,24 @@ Every acceptance criterion must be listed here. Update this table in the same ch
 | [AC-026](AC-026.md) | Popup rows expand independently | Verified | [US-005](../user-stories/US-005.md) |
 | [AC-027](AC-027.md) | Popup rows are collapsed again after reopening | Verified | [US-005](../user-stories/US-005.md) |
 | [AC-028](AC-028.md) | Every spring ingredient crop and rare variety shows its info | Verified | [US-002](../user-stories/US-002.md) |
+| [AC-029](AC-029.md) | Salmon slot hover shows Salmon fish info | Verified | [US-006](../user-stories/US-006.md) |
+| [AC-030](AC-030.md) | Eel slot hover shows Eel fish info | Verified | [US-006](../user-stories/US-006.md) |
+| [AC-031](AC-031.md) | Fish A group slot hover shows no info | Verified | [US-006](../user-stories/US-006.md) |
+| [AC-032](AC-032.md) | Fish Cake slot hover shows no info | Verified | [US-006](../user-stories/US-006.md) |
+| [AC-033](AC-033.md) | Card fish info hides when the pointer moves away | Verified | [US-006](../user-stories/US-006.md) |
+| [AC-034](AC-034.md) | Clicking a named-fish slot still opens its popup list | Verified | [US-006](../user-stories/US-006.md) |
+| [AC-035](AC-035.md) | Fish popup rows start collapsed | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-036](AC-036.md) | Hovering a popup fish row shows no info | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-037](AC-037.md) | Clicking a popup fish row expands its indented info | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-038](AC-038.md) | Clicking an expanded popup fish row collapses it | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-039](AC-039.md) | Fish Cake popup row expands to no info | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-040](AC-040.md) | Popup fish rows expand independently | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-041](AC-041.md) | Popup fish rows are collapsed again after reopening | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-042](AC-042.md) | Marbled Eel row expands to its own catch info | Verified | [US-007](../user-stories/US-007.md) |
+| [AC-043](AC-043.md) | Fish info works with internet access off | Verified | [US-008](../user-stories/US-008.md) |
+| [AC-044](AC-044.md) | The running app never contacts fogu for fish info | Verified | [US-008](../user-stories/US-008.md) |
+| [AC-045](AC-045.md) | Every fishing-page fish that is an ingredient shows its info | Verified | [US-008](../user-stories/US-008.md) |
+| [AC-046](AC-046.md) | Kept fish info includes all 45 species | Verified | [US-008](../user-stories/US-008.md) |
+| [AC-047](AC-047.md) | Recipes page works when stored fish info is removed | Verified | [US-009](../user-stories/US-009.md) |
+| [AC-048](AC-048.md) | Recipes page works when stored fish info is unreadable | Verified | [US-009](../user-stories/US-009.md) |
+| [AC-049](AC-049.md) | Crop info still works when stored fish info is removed | Verified | [US-009](../user-stories/US-009.md) |

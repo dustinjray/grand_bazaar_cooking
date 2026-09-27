@@ -1,0 +1,827 @@
+[
+  {
+    "id": "pale_chub",
+    "name": "Pale Chub",
+    "seasons": [
+      "All Seasons"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Equestrian Park",
+      "Mountain Bridge",
+      "Gabriel's House",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "bluegill",
+    "name": "Bluegill",
+    "seasons": [
+      "All Seasons"
+    ],
+    "weather": [
+      "Not Sunny"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Zephyr Town"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "bitterling",
+    "name": "Bitterling",
+    "seasons": [
+      "All Season"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Hilltop"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "tamoroko",
+    "name": "Tamoroko",
+    "seasons": [
+      "Spring"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "mugitsuku",
+    "name": "Mugitsuku",
+    "seasons": [
+      "Spring"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Bazaar",
+      "Zephyr Town"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "dark_chub",
+    "name": "Dark Chub",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "loach",
+    "name": "Loach",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "stone_moroko",
+    "name": "Stone Moroko",
+    "seasons": [
+      "Spring",
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Bazaar",
+      "Equestrian Park",
+      "Zephyr Town"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "amur_minnow",
+    "name": "Amur Minnow",
+    "seasons": [
+      "Spring",
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "Not Cloudy"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream",
+      "Yellow Windmill"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "goldfish",
+    "name": "Goldfish",
+    "seasons": [
+      "Spring",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Yellow Windmill"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "icefish",
+    "name": "Icefish",
+    "seasons": [
+      "Spring",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Bazaar",
+      "Gabriel's House"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "sweetfish",
+    "name": "Sweetfish",
+    "seasons": [
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "killifish",
+    "name": "Killifish",
+    "seasons": [
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Sunny",
+      "Cloudy"
+    ],
+    "locations": [
+      "Bazaar",
+      "Mountain Bridge",
+      "Gabriel's House"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "sculpin",
+    "name": "Sculpin",
+    "seasons": [
+      "Summer",
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Equestrian Park",
+      "Mountain Hilltop",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "dark_sleeper",
+    "name": "Dark Sleeper",
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Bazaar",
+      "Equestrian Park",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "pond_smelt",
+    "name": "Pond Smelt",
+    "seasons": [
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Zephyr Town"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "willow_shiner",
+    "name": "Willow Shiner",
+    "seasons": [
+      "Winter"
+    ],
+    "weather": [
+      "Not Sunny"
+    ],
+    "locations": [
+      "Mountain Hilltop"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "cherry_salmon",
+    "name": "Cherry Salmon",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Yellow Windmill"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "brown_trout",
+    "name": "Brown Trout",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "rainbow_trout",
+    "name": "Rainbow Trout",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Stream",
+      "Yellow Windmill"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "snakehead",
+    "name": "Snakehead",
+    "seasons": [
+      "Spring",
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "Sunny",
+      "Cloudy"
+    ],
+    "locations": [
+      "Zephyr Town"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "dace",
+    "name": "Dace",
+    "seasons": [
+      "All Seasons"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "crucian_carp",
+    "name": "Crucian Carp",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Equestrian Park"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "masu_trout",
+    "name": "Masu Trout",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "Rainy",
+      "Stormy"
+    ],
+    "locations": [
+      "Bazaar",
+      "Yellow Windmill"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "char",
+    "name": "Char",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Not Sunny"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream",
+      "Yellow Windmill"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "black_bass",
+    "name": "Black Bass",
+    "seasons": [
+      "Spring",
+      "Summer",
+      "Winter"
+    ],
+    "weather": [
+      "Not Sunny"
+    ],
+    "locations": [
+      "Equestrian Park",
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "grayling",
+    "name": "Grayling",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "Not Stormy",
+      "Not Heavy Rain"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "three_lips_carp",
+    "name": "Three-Lips Carp",
+    "seasons": [
+      "Summer"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "eel",
+    "name": "Eel",
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "Not Sunny",
+      "Not Cloudy"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Zephyr Town"
+    ],
+    "rod": "Copper",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "barbel_steed",
+    "name": "Barbel Steed",
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "Not Sunny",
+      "Not Cloudy"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Zephyr Town"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "bighead_carp",
+    "name": "Bighead Carp",
+    "seasons": [
+      "All Seasons"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Bazaar",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "silver_carp",
+    "name": "Silver Carp",
+    "seasons": [
+      "All Seasons"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Stream",
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "basa",
+    "name": "Basa",
+    "seasons": [
+      "All Seasons"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Bridge"
+    ],
+    "rod": "All",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "yellow_perch",
+    "name": "Yellow Perch",
+    "seasons": [
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "nile_perch",
+    "name": "Nile Perch",
+    "seasons": [
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Bridge",
+      "Mountain Hilltop",
+      "Mountain Stream"
+    ],
+    "rod": "Silver",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "salmon",
+    "name": "Salmon",
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "All weather"
+    ],
+    "locations": [
+      "Mountain Hilltop"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "marbled_eel",
+    "name": "Marbled Eel",
+    "seasons": [
+      "Autumn",
+      "Winter"
+    ],
+    "weather": [
+      "Heavy Rain",
+      "Stormy"
+    ],
+    "locations": [
+      "Zephyr Town"
+    ],
+    "rod": "Copper+",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "wels_catfish",
+    "name": "Wels Catfish",
+    "seasons": [
+      "Spring"
+    ],
+    "weather": [
+      "Any weather"
+    ],
+    "locations": [
+      "Mountain Bridge"
+    ],
+    "rod": "Orichalcum",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "catfish",
+    "name": "Catfish",
+    "seasons": [
+      "Spring",
+      "Summer"
+    ],
+    "weather": [
+      "Rainy",
+      "Stormy"
+    ],
+    "locations": [
+      "Zephyr Town"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "black_carp",
+    "name": "Black Carp",
+    "seasons": [
+      "Spring",
+      "Autumn"
+    ],
+    "weather": [
+      "Any weather"
+    ],
+    "locations": [
+      "Yellow Windmill",
+      "Zephyr Town"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "grass_carp",
+    "name": "Grass Carp",
+    "seasons": [
+      "Summer",
+      "Autumn"
+    ],
+    "weather": [
+      "Any weather"
+    ],
+    "locations": [
+      "Gabriel's House",
+      "Zephyr Town"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "northern_pike",
+    "name": "Northern Pike",
+    "seasons": [
+      "Autumn"
+    ],
+    "weather": [
+      "Any weather"
+    ],
+    "locations": [
+      "Gabriel's House"
+    ],
+    "rod": "Orichalcum",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "shining_fish",
+    "name": "Shining Fish",
+    "seasons": [
+      "Autumn"
+    ],
+    "weather": [
+      "Sunny weather",
+      "No Wind"
+    ],
+    "locations": [
+      "Mountain Hilltop"
+    ],
+    "rod": "Orichalcum",
+    "time": "12:00 pm to 5:00 pm",
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "peacock_bass",
+    "name": "Peacock Bass",
+    "seasons": [
+      "Winter"
+    ],
+    "weather": [
+      "Any weather"
+    ],
+    "locations": [
+      "Equestrian Park"
+    ],
+    "rod": "Orichalcum",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  },
+  {
+    "id": "koi",
+    "name": "Koi",
+    "seasons": [
+      "Winter"
+    ],
+    "weather": [
+      "Sunny",
+      "Cloudy"
+    ],
+    "locations": [
+      "Yellow Windmill"
+    ],
+    "rod": "Gold",
+    "time": null,
+    "source_url": "https://fogu.com/sos6/activities/fishing.html"
+  }
+]

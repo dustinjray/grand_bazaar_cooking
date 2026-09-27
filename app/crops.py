@@ -9,15 +9,26 @@ from pathlib import Path
 from app.catalog import DATA_DIR
 
 NO_INFO = "No info available"
+SEASONS = ("Spring", "Summer", "Autumn", "Winter")
 
 
 def build_crop_info(crops: list[dict]) -> dict[str, str]:
-    info: dict[str, str] = {}
+    seasons: dict[str, set[str]] = {}
+    stores: dict[str, list[str]] = {}
+    rare_bases: dict[str, str] = {}
     for crop in crops:
-        season = crop["season"]
-        info[crop["name"]] = f"Season: {season}; Purchase at {', '.join(crop['seed_stores'])}"
+        name = crop["name"]
+        seasons.setdefault(name, set()).add(crop["season"])
+        crop_stores = stores.setdefault(name, [])
+        for store in crop["seed_stores"]:
+            if store not in crop_stores:
+                crop_stores.append(store)
         if crop.get("rare_variety"):
-            info[crop["rare_variety"]] = f"Season: {season}; Rare variety of {crop['name']}"
+            rare_bases[crop["rare_variety"]] = name
+    season_text = {name: ", ".join(sorted(s, key=SEASONS.index)) for name, s in seasons.items()}
+    info = {name: f"Season: {season_text[name]}; Purchase at {', '.join(stores[name])}" for name in seasons}
+    for rare, base in rare_bases.items():
+        info[rare] = f"Season: {season_text[base]}; Rare variety of {base}"
     return info
 
 

@@ -52,6 +52,35 @@ class CropInfoTextTests(unittest.TestCase):
         self.assertEqual(NO_INFO, "No info available")
 
 
+def _page_entry(name: str, season: str, stores: list[str], rare: str | None) -> dict:
+    return {"id": name.lower(), "name": name, "season": season, "seed_stores": stores, "rare_variety": rare}
+
+
+class MultiSeasonCropInfoTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.info = build_crop_info(
+            [
+                _page_entry("Potato", "Winter", ["Miguel's Mercantile"], "Star Potato"),
+                _page_entry("Potato", "Spring", ["Miguel's Mercantile"], "Star Potato"),
+                _page_entry("Potato", "Summer", ["Miguel's Mercantile", "Happy Shoppe"], "Star Potato"),
+                _page_entry("Carrot", "Autumn", ["Paradise Sundries"], "Three-Forked Carrot"),
+                _page_entry("Carrot", "Winter", ["Paradise Sundries"], None),
+            ]
+        )
+
+    def test_seasons_in_calendar_order_and_each_store_once(self) -> None:
+        self.assertEqual(
+            crop_info_text(self.info, "Potato"),
+            "Season: Spring, Summer, Winter; Purchase at Miguel's Mercantile, Happy Shoppe",
+        )
+
+    def test_rare_variety_shows_all_base_crop_seasons(self) -> None:
+        self.assertEqual(crop_info_text(self.info, "Star Potato"), "Season: Spring, Summer, Winter; Rare variety of Potato")
+        self.assertEqual(
+            crop_info_text(self.info, "Three-Forked Carrot"), "Season: Autumn, Winter; Rare variety of Carrot"
+        )
+
+
 class StoredCropInfoTests(unittest.TestCase):
     def test_story_examples(self) -> None:
         info = get_crop_info()
@@ -59,8 +88,13 @@ class StoredCropInfoTests(unittest.TestCase):
             "Turnip": "Season: Spring; Purchase at Miguel's Mercantile, Happy Shoppe",
             "Asparagus": "Season: Spring; Purchase at Paradise Sundries",
             "Giant Turnip": "Season: Spring; Rare variety of Turnip",
+            "Potato": "Season: Spring, Summer, Winter; Purchase at Miguel's Mercantile",
+            "Giant Tomato": "Season: Summer, Autumn; Rare variety of Tomato",
+            "Pumpkin": "Season: Summer; Purchase at Miguel's Mercantile",
+            "Sweet Potato": "Season: Autumn; Purchase at Miguel's Mercantile",
+            "Napa Cabbage": "Season: Winter; Purchase at Paradise Sundries, Happy Shoppe",
             "Vegetable A": "No info available",
-            "Tomato": "No info available",
+            "Egg": "No info available",
         }
         for name, text in expected.items():
             with self.subTest(name=name):
@@ -100,6 +134,7 @@ class UnavailableCropInfoTests(unittest.TestCase):
             "list of text": json.dumps(["Turnip"]).encode(),
             "missing fields": json.dumps([{"name": "Turnip"}]).encode(),
             "stores not a list": json.dumps([{"name": "Turnip", "season": "Spring", "seed_stores": 3}]).encode(),
+            "unknown season": json.dumps([{"name": "Turnip", "season": "Monsoon", "seed_stores": []}]).encode(),
         }
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "crops.json"

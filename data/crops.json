@@ -174,5 +174,556 @@
     ],
     "rare_variety": null,
     "source_url": "https://fogu.com/sos6/farming/crops_spring.html"
+  },
+  {
+    "id": "potato",
+    "name": "Potato",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Star Potato",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "pumpkin",
+    "name": "Pumpkin",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Giant Pumpkin",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "onion",
+    "name": "Onion",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Brawny Onion",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "radish",
+    "name": "Radish",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Calabash Radish",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "watermelon",
+    "name": "Watermelon",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": "Heart Watermelon",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "melon",
+    "name": "Melon",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Jewel Melon",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "cucumber",
+    "name": "Cucumber",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Wavy Cucumber",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "corn",
+    "name": "Corn",
+    "season": "Summer",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Mosaic Corn",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "tomato",
+    "name": "Tomato",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Giant Tomato",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "pineapple",
+    "name": "Pineapple",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Jewel Pineapple",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "eggplant",
+    "name": "Eggplant",
+    "season": "Summer",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Ball Eggplant",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "red_bell_pepper",
+    "name": "Red Bell Pepper",
+    "season": "Summer",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Dancing Red Bell Pepper",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "green_bell_pepper",
+    "name": "Green Bell Pepper",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Dancing Green Bell Pepper",
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "soybean",
+    "name": "Soybean",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "summer_tea_leaves",
+    "name": "Summer Tea Leaves",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "hibiscus",
+    "name": "Hibiscus",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "petunia",
+    "name": "Petunia",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "marigold",
+    "name": "Marigold",
+    "season": "Summer",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "sunflower",
+    "name": "Sunflower",
+    "season": "Summer",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_summer.html"
+  },
+  {
+    "id": "radish",
+    "name": "Radish",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Calabash Radish",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "melon",
+    "name": "Melon",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Jewel Melon",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "cauliflower",
+    "name": "Cauliflower",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Purple Cauliflower",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "carrot",
+    "name": "Carrot",
+    "season": "Autumn",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Three-Forked Carrot",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "spinach",
+    "name": "Spinach",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Heart Spinach",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "chili_pepper",
+    "name": "Chili Pepper",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Curled Chili Pepper",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "bok_choy",
+    "name": "Bok Choy",
+    "season": "Autumn",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Golden Bok Choy",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "cucumber",
+    "name": "Cucumber",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Wavy Cucumber",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "tomato",
+    "name": "Tomato",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Giant Tomato",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "sweet_potato",
+    "name": "Sweet Potato",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Giant Sweet Potato",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "eggplant",
+    "name": "Eggplant",
+    "season": "Autumn",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Ball Eggplant",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "green_bell_pepper",
+    "name": "Green Bell Pepper",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Dancing Green Bell Pepper",
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "soybean",
+    "name": "Soybean",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "autumn_tea_leaves",
+    "name": "Autumn Tea Leaves",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "rose",
+    "name": "Rose",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "chrysanthemum",
+    "name": "Chrysanthemum",
+    "season": "Autumn",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "clematis",
+    "name": "Clematis",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "daisy",
+    "name": "Daisy",
+    "season": "Autumn",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_autumn.html"
+  },
+  {
+    "id": "cabbage",
+    "name": "Cabbage",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Giant Cabbage",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "potato",
+    "name": "Potato",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Star Potato",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "carrot",
+    "name": "Carrot",
+    "season": "Winter",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Three-Forked Carrot",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "bok_choy",
+    "name": "Bok Choy",
+    "season": "Winter",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Golden Bok Choy",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "daikon_radish",
+    "name": "Daikon Radish",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Fork-Root Daikon",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "napa_cabbage",
+    "name": "Napa Cabbage",
+    "season": "Winter",
+    "seed_stores": [
+      "Paradise Sundries",
+      "Happy Shoppe"
+    ],
+    "rare_variety": "Golden Napa Cabbage",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "green_onion",
+    "name": "Green Onion",
+    "season": "Winter",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": "Brawny Green Onion",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "burdock",
+    "name": "Burdock",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile",
+      "Happy Shoppe"
+    ],
+    "rare_variety": "Twisted Burdock",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "broccoli",
+    "name": "Broccoli",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": "Pom-pom Broccoli",
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "cineraria",
+    "name": "Cineraria",
+    "season": "Winter",
+    "seed_stores": [
+      "Paradise Sundries"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "primrose",
+    "name": "Primrose",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "begonia",
+    "name": "Begonia",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
+  },
+  {
+    "id": "bellflower",
+    "name": "Bellflower",
+    "season": "Winter",
+    "seed_stores": [
+      "Miguel's Mercantile"
+    ],
+    "rare_variety": null,
+    "source_url": "https://fogu.com/sos6/farming/crops_winter.html"
   }
 ]

@@ -1,4 +1,4 @@
-"""Scrape Grand Bazaar spring crop info (seed stores, rare varieties) from fogu.com into JSON."""
+"""Scrape Grand Bazaar crop info (seasons, seed stores, rare varieties) from fogu.com's four season pages into JSON."""
 
 from __future__ import annotations
 
@@ -15,11 +15,15 @@ from scrape_recipes import CACHE_DIR, REQUEST_DELAY_SEC, USER_AGENT, slugify
 
 SEASON_PAGES = [
     ("Spring", "https://fogu.com/sos6/farming/crops_spring.html"),
+    ("Summer", "https://fogu.com/sos6/farming/crops_summer.html"),
+    ("Autumn", "https://fogu.com/sos6/farming/crops_autumn.html"),
+    ("Winter", "https://fogu.com/sos6/farming/crops_winter.html"),
 ]
 
 STORE_NAME_FIXES = {
     "Happe Shoppe": "Happy Shoppe",
     "Miguel's Mercantitle": "Miguel's Mercantile",
+    "Miguel's Mercantie": "Miguel's Mercantile",
 }
 
 STORE_LOCATIONS = {"town", "bazaar"}

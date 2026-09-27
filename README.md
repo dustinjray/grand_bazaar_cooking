@@ -40,9 +40,9 @@ Outputs (under `data/`):
 | `recipes.json` | All recipes with expanded `accepted` item ids per slot |
 | `items.json` | Inventory catalog: each item lists the slot bases it `fills` |
 | `parse_report.txt` | Unknown tokens, missing prices, empty slots |
-| `crops.json` | Spring crops: season, seed store names, rare variety (from `scrape_crops.py`) |
+| `crops.json` | Crops from each season page: season, seed store names, rare variety (from `scrape_crops.py`) |
 
-Spring crop info comes from fogu's [spring crops page](https://fogu.com/sos6/farming/crops_spring.html) and is collected separately into `data/crops.json`, so the app never needs to contact fogu:
+Crop info comes from fogu's [spring](https://fogu.com/sos6/farming/crops_spring.html), [summer](https://fogu.com/sos6/farming/crops_summer.html), [autumn](https://fogu.com/sos6/farming/crops_autumn.html), and [winter](https://fogu.com/sos6/farming/crops_winter.html) crop pages and is collected separately into `data/crops.json`, so the app never needs to contact fogu:
 
 ```bash
 python scrape_crops.py
@@ -76,5 +76,5 @@ When matching, fill the most specific slots first (fewest `accepted` ids) so a S
 - `models.py` — `Item`, `IngredientSlot`, `Recipe`
 - `build_groups.py` — writes `data/groups.json`
 - `scrape_recipes.py` — fetch, parse, expand, write JSON
-- `scrape_crops.py` — fetch and parse spring crop info into `data/crops.json`
+- `scrape_crops.py` — fetch and parse crop info from all four season pages into `data/crops.json`
 - `app/` — local FastAPI kitchen UI

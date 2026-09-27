@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
 
-from app.catalog import get_catalog
+from app.catalog import DATA_DIR, get_catalog
 from app.db import connect, get_appliances, get_inventory, set_appliance, set_count, apply_inventory
 from app.main import recipe_uses_items, sort_recipe_rows
 from app.matcher import CookError, MissingSlot, RecipeStatus, evaluate, plan_cook
@@ -293,6 +294,107 @@ class UseSoonTests(unittest.TestCase):
     def test_empty_selection_does_not_match(self) -> None:
         soup = get_catalog().recipes["pumpkin_soup"]
         self.assertFalse(recipe_uses_items(soup, set()))
+
+
+LETTER_GROUP_DISPLAYS = {
+    "Fish A",
+    "Fish B",
+    "Fish C",
+    "Fish D",
+    "Fish E",
+    "Vegetable A",
+    "Vegetable B",
+    "Vegetable C",
+    "Vegetable D",
+    "Vegetable E",
+    "Fruit A",
+    "Fruit B",
+}
+
+# Wiki letter-group assignments (GameRant / ranchstory).
+EXPECTED_LETTER_SLOTS = {
+    "mixed_salad": ["Vegetable A"],
+    "fish_chips": ["Fish A"],
+    "shumai_dumplings": ["Fish B"],
+    "sashimi": ["Fish C"],
+    "fish_cake": ["Fish C"],
+    "stew": ["Vegetable B"],
+    "hot_pot": ["Fish D"],
+    "ukha": ["Fish D"],
+    "marinated_fish": ["Fish D"],
+    "spahgetti_soup": ["Fish E"],
+    "carpaccio": ["Fish A"],
+    "cheese_fondue": ["Vegetable C"],
+    "spicy_curry": ["Vegetable D"],
+    "seaweed_curry": ["Vegetable D"],
+    "milk_curry": ["Vegetable D"],
+    "burgundy_fondue": ["Vegetable C"],
+    "tempura": ["Vegetable E"],
+    "paella": ["Fish E"],
+    "meuniere_fish": ["Fish E"],
+    "pink_fondue": ["Vegetable C"],
+    "curry_rice": ["Vegetable D"],
+    "vegetable_curry": ["Vegetable A"],
+    "bouillabaisse": ["Fish E"],
+    "tomato_fondue": ["Vegetable C"],
+    "fruit_sandwich": ["Fruit A", "Fruit A"],
+    "simmered_fish": ["Fish B"],
+    "grilled_fish": ["Fish C"],
+    "trifle": ["Fruit A"],
+    "fruit_dumplings": ["Fruit A", "Fruit A"],
+    "chocolate_fondue": ["Fruit B"],
+    "happy_fruit_platter": ["Fruit A", "Fruit B"],
+    "happy_chef_salad": ["Vegetable A"],
+}
+
+
+class LetterGroupSlotTests(unittest.TestCase):
+    FISH_A = {
+        "yellow_perch",
+        "snakehead",
+        "masu_trout",
+        "char",
+        "salmon",
+        "icefish",
+        "cherry_salmon",
+    }
+
+    def test_fish_chips_is_fish_a(self) -> None:
+        slot = get_catalog().recipes["fish_chips"].ingredients[0]
+        self.assertEqual(slot.display, "Fish A")
+        self.assertEqual(set(slot.accepted), self.FISH_A)
+        self.assertNotIn("dace", slot.accepted)
+
+    def test_happy_fruit_platter_fruit_a_then_fruit_b(self) -> None:
+        fruits = [
+            slot
+            for slot in get_catalog().recipes["happy_fruit_platter"].ingredients
+            if slot.display in {"Fruit A", "Fruit B"}
+        ]
+        self.assertEqual([slot.display for slot in fruits], ["Fruit A", "Fruit B"])
+        self.assertIn("cherry", fruits[0].accepted)
+        self.assertNotIn("apple", fruits[0].accepted)
+        self.assertIn("apple", fruits[1].accepted)
+        self.assertNotIn("cherry", fruits[1].accepted)
+
+    def test_recipe_override_keys_match_recipe_ids(self) -> None:
+        groups = json.loads((DATA_DIR / "groups.json").read_text(encoding="utf-8"))
+        recipes = get_catalog().recipes
+        missing = sorted(
+            key for key in groups["recipe_overrides"] if key not in recipes
+        )
+        self.assertEqual(missing, [])
+
+    def test_letter_group_displays_match_wiki(self) -> None:
+        catalog = get_catalog()
+        for recipe_id, expected in EXPECTED_LETTER_SLOTS.items():
+            with self.subTest(recipe_id):
+                displays = [
+                    slot.display
+                    for slot in catalog.recipes[recipe_id].ingredients
+                    if slot.display in LETTER_GROUP_DISPLAYS
+                ]
+                self.assertEqual(displays, expected)
 
 
 if __name__ == "__main__":

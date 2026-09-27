@@ -1125,18 +1125,15 @@
       {
         "quantity": 1,
         "accepted": [
-          "amur_minnow",
-          "dace",
-          "pale_chub",
-          "sculpin",
-          "dark_chub",
-          "bitterling",
-          "tamoroko",
-          "rainbow_trout",
-          "silver_carp",
-          "basa"
+          "yellow_perch",
+          "snakehead",
+          "masu_trout",
+          "char",
+          "salmon",
+          "icefish",
+          "cherry_salmon"
         ],
-        "display": "Fish C",
+        "display": "Fish A",
         "raw": "fish"
       },
       {
@@ -11057,9 +11054,9 @@
       {
         "quantity": 1,
         "accepted": [
-          "cherry",
-          "blueberry",
+          "apple",
           "green_grape",
+          "red_grape",
           "strawberry",
           "mango",
           "pineapple",
@@ -11069,16 +11066,16 @@
           "melon",
           "chicken_mango",
           "finger_green_grapes",
-          "flower_blueberry",
+          "finger_red_grapes",
+          "golden_apple",
           "golden_banana",
           "golden_peach",
           "golden_strawberry",
-          "heart_cherry",
           "jewel_melon",
           "jewel_pineapple",
           "lumpy_orange"
         ],
-        "display": "Fruit A",
+        "display": "Fruit B",
         "raw": "(fruit)"
       }
     ],

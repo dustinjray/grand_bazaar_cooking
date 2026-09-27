@@ -3697,7 +3697,7 @@
         "family": "fish_b"
       }
     },
-    "fish_and_chips": {
+    "fish_chips": {
       "fish": {
         "family": "fish_a"
       }
@@ -3733,11 +3733,6 @@
     "royal_milk_tea": {
       "milk+": {
         "item": "milk_plus"
-      }
-    },
-    "happy_fruit_platter": {
-      "(fruit)": {
-        "family": "fruit_a"
       }
     },
     "chocolate_fondue": {

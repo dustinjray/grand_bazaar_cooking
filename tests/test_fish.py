@@ -6,7 +6,15 @@ import json
 import unittest
 
 from app.catalog import DATA_DIR, get_catalog
-from scrape_fish import parse_fish_page, parse_locations, parse_season_weather
+
+try:
+    from scripts.scrape_fish import parse_fish_page, parse_locations, parse_season_weather
+except ImportError:
+    HAVE_SCRAPER = False
+else:
+    HAVE_SCRAPER = True
+
+needs_scraper = unittest.skipUnless(HAVE_SCRAPER, "requires requirements-scripts.txt")
 
 SAMPLE_PAGE = """
 <h2>Fish Encyclopedia</h2>
@@ -98,6 +106,7 @@ NON_INGREDIENT_FISH = {
 }
 
 
+@needs_scraper
 class SeasonWeatherParseTests(unittest.TestCase):
     def test_splits_seasons_from_weather(self) -> None:
         self.assertEqual(
@@ -112,6 +121,7 @@ class SeasonWeatherParseTests(unittest.TestCase):
         )
 
 
+@needs_scraper
 class LocationParseTests(unittest.TestCase):
     def test_strips_time_parenthetical(self) -> None:
         locations, time = parse_locations(["Mountain Hilltop", "(12:00 pm to 5:00 pm only)"])
@@ -119,6 +129,7 @@ class LocationParseTests(unittest.TestCase):
         self.assertEqual(time, "12:00 pm to 5:00 pm")
 
 
+@needs_scraper
 class FishPageParseTests(unittest.TestCase):
     def test_parses_each_fish(self) -> None:
         fish = {row["name"]: row for row in parse_fish_page(SAMPLE_PAGE)}

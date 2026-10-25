@@ -6,7 +6,15 @@ import json
 import unittest
 
 from app.catalog import DATA_DIR
-from scrape_crops import SEASON_PAGES, parse_crop_page, parse_rare_variety, parse_seed_stores
+
+try:
+    from scripts.scrape_crops import SEASON_PAGES, parse_crop_page, parse_rare_variety, parse_seed_stores
+except ImportError:
+    HAVE_SCRAPER = False
+else:
+    HAVE_SCRAPER = True
+
+needs_scraper = unittest.skipUnless(HAVE_SCRAPER, "requires requirements-scripts.txt")
 
 SAMPLE_PAGE = """
 <table class="data">
@@ -87,6 +95,7 @@ EXPECTED = {
 }
 
 
+@needs_scraper
 class SeedStoreParseTests(unittest.TestCase):
     def test_drops_locations_prices_and_fixes_typos(self) -> None:
         self.assertEqual(
@@ -104,6 +113,7 @@ class SeedStoreParseTests(unittest.TestCase):
         self.assertEqual(parse_seed_stores("Miguel's Mercantie, Bazaar (168 G)"), ["Miguel's Mercantile"])
 
 
+@needs_scraper
 class RareVarietyParseTests(unittest.TestCase):
     def test_strips_prices(self) -> None:
         self.assertEqual(parse_rare_variety("Brawny Onion (938 G, 1200, 2250 G)"), "Brawny Onion")
@@ -112,6 +122,7 @@ class RareVarietyParseTests(unittest.TestCase):
         self.assertIsNone(parse_rare_variety("None "))
 
 
+@needs_scraper
 class CropPageParseTests(unittest.TestCase):
     def test_parses_each_crop(self) -> None:
         crops = {c["name"]: c for c in parse_crop_page(SAMPLE_PAGE, "Spring")}
@@ -128,6 +139,7 @@ class CropPageParseTests(unittest.TestCase):
         self.assertEqual(crops["Cabbage"]["rare_variety"], "Giant Cabbage")
 
 
+@needs_scraper
 class SeasonPageTests(unittest.TestCase):
     def test_scrapes_all_four_season_pages(self) -> None:
         self.assertEqual(dict(SEASON_PAGES), SEASON_URLS)

@@ -10,7 +10,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup, Tag
 
-from scrape_recipes import CACHE_DIR, USER_AGENT, slugify
+from scripts.scrape_recipes import CACHE_DIR, USER_AGENT, slugify
 
 FISH_PAGE = "https://fogu.com/sos6/activities/fishing.html"
 SEASON_TOKENS = {"spring", "summer", "autumn", "winter"}

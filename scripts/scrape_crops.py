@@ -11,7 +11,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup, Tag
 
-from scrape_recipes import CACHE_DIR, REQUEST_DELAY_SEC, USER_AGENT, slugify
+from scripts.scrape_recipes import CACHE_DIR, REQUEST_DELAY_SEC, USER_AGENT, slugify
 
 SEASON_PAGES = [
     ("Spring", "https://fogu.com/sos6/farming/crops_spring.html"),

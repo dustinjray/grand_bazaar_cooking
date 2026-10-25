@@ -1,6 +1,6 @@
 # Grand Bazaar cooking
 
-Scrapes cooking recipes from [fogu.com](https://fogu.com/sos6/farming/cooking.html) into JSON, then serves a local kitchen app: enter inventory, highlight dishes you can cook, and deduct ingredients when you mark a recipe cooked.
+A local companion app for **Story of Seasons: Grand Bazaar** on Nintendo Switch. Enter what's in your inventory and which kitchen appliances you own, see which dishes you can cook right now (and what you're missing for the rest), and deduct ingredients when you cook. Ingredients show where to get them: seasons and seed stores for crops, and season, weather, location, rod and time of day for fish.
 
 ## Setup
 
@@ -17,43 +17,47 @@ python -m app
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000). Ingredient counts and owned appliances are stored in `data/inventory.db` (created on first run).
 
 - **Inventory** — check Pot / Frying Pan / Oven if they are installed at home. Set item counts with +/−.
-- **Recipes** — cookable dishes are highlighted. For the rest, missing slots (and a missing appliance) are listed.
+- **Recipes** — cookable dishes are highlighted. For the rest, missing slots (and a missing appliance) are listed. Hover or click an ingredient to see its crop or fish info.
 - **Cook** — enter how many you made, then pick which inventory items fill each slot. Cooking consumes those items. If the dish itself is a catalog item (Omelet, Mixed Salad, …), that many are added to inventory. Appliances are never consumed.
 
-```bash
-python -m unittest tests.test_matcher
-```
-
-## Scrape
+## Tests
 
 ```bash
-python scrape_recipes.py
+python -m unittest
 ```
 
-This fetches the cooking index plus the six category pages (salads, soups, sides, main dishes, desserts, others), with a 1 second delay between requests. Cached HTML is stored under `tmp/` so reruns do not hit the network.
+The HTML parser tests for the data scripts are skipped unless the script dependencies (`requirements-scripts.txt`) are installed.
+
+## Game data
+
+All game data ships with the app in `data/`, so the app works offline and never contacts any website. Recipe, crop and fish data was compiled from the Grand Bazaar guide at [fogu.com](https://fogu.com/sos6/).
+
+## Updating game data (maintainers)
+
+The tools in `scripts/` regenerate `data/` and are not needed to run the app. Install their extra dependencies and run them from the repo root:
+
+```bash
+python -m pip install -r requirements-scripts.txt
+python -m scripts.build_groups
+python -m scripts.scrape_recipes
+python -m scripts.scrape_crops
+python -m scripts.scrape_fish
+```
+
+`scrape_recipes` reads fogu's [cooking index](https://fogu.com/sos6/farming/cooking.html) plus the six category pages (salads, soups, sides, main dishes, desserts, others), with a 1 second delay between requests. `scrape_crops` reads the [spring](https://fogu.com/sos6/farming/crops_spring.html), [summer](https://fogu.com/sos6/farming/crops_summer.html), [autumn](https://fogu.com/sos6/farming/crops_autumn.html), and [winter](https://fogu.com/sos6/farming/crops_winter.html) crop pages, and `scrape_fish` reads the [fishing page](https://fogu.com/sos6/activities/fishing.html). Cached HTML is stored under `tmp/` so reruns do not hit the network.
+
+Run `build_groups` before `scrape_recipes` after editing the curated catalog, since `scrape_recipes` reads `groups.json`.
 
 Outputs (under `data/`):
 
 | File | Role |
 | --- | --- |
-| `groups.json` | Curated families, plus/mutant upgrades, and fogu token aliases (input) |
+| `groups.json` | Curated families, plus/mutant upgrades, and fogu token aliases (from `build_groups`, input to `scrape_recipes`) |
 | `recipes.json` | All recipes with expanded `accepted` item ids per slot |
 | `items.json` | Inventory catalog: each item lists the slot bases it `fills` |
 | `parse_report.txt` | Unknown tokens, missing prices, empty slots |
-| `crops.json` | Crops from each season page: season, seed store names, rare variety (from `scrape_crops.py`) |
-
-Crop info comes from fogu's [spring](https://fogu.com/sos6/farming/crops_spring.html), [summer](https://fogu.com/sos6/farming/crops_summer.html), [autumn](https://fogu.com/sos6/farming/crops_autumn.html), and [winter](https://fogu.com/sos6/farming/crops_winter.html) crop pages and is collected separately into `data/crops.json`, so the app never needs to contact fogu:
-
-```bash
-python scrape_crops.py
-```
-
-Regenerate `groups.json` after catalog edits:
-
-```bash
-python build_groups.py
-python scrape_recipes.py
-```
+| `crops.json` | Crops from each season page: season, seed store names, rare variety (from `scrape_crops`) |
+| `fish.json` | Fish catch info: seasons, weather, locations, rod, time of day (from `scrape_fish`) |
 
 ## Data shape
 
@@ -74,7 +78,9 @@ When matching, fill the most specific slots first (fewest `accepted` ids) so a S
 ## Layout
 
 - `models.py` — `Item`, `IngredientSlot`, `Recipe`
-- `build_groups.py` — writes `data/groups.json`
-- `scrape_recipes.py` — fetch, parse, expand, write JSON
-- `scrape_crops.py` — fetch and parse crop info from all four season pages into `data/crops.json`
-- `app/` — local FastAPI kitchen UI
+- `app/` — local FastAPI companion UI
+- `scripts/` — offline data tools (optional dependencies):
+  - `build_groups.py` — writes `data/groups.json`
+  - `scrape_recipes.py` — fetch, parse, expand, write recipe and item JSON
+  - `scrape_crops.py` — crop info from all four season pages into `data/crops.json`
+  - `scrape_fish.py` — fish catch info into `data/fish.json`
